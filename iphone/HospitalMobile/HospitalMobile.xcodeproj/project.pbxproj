@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08D97E7718CDA1EE006D5F0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7618CDA1EE006D5F0C /* Foundation.framework */; };
+		08D97E7918CDA1EE006D5F0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */; };
+		08D97E7B18CDA1EE006D5F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7A18CDA1EE006D5F0C /* UIKit.framework */; };
+		08D97E8118CDA1EE006D5F0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D97E7F18CDA1EE006D5F0C /* InfoPlist.strings */; };
+		08D97E8318CDA1EE006D5F0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97E8218CDA1EE006D5F0C /* main.m */; };
+		08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97E8618CDA1EE006D5F0C /* LZAppDelegate.m */; };
+		08D97E8918CDA1EE006D5F0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08D97E8818CDA1EE006D5F0C /* Images.xcassets */; };
+		08D97E9018CDA1EE006D5F0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E8F18CDA1EE006D5F0C /* XCTest.framework */; };
+		08D97E9118CDA1EE006D5F0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7618CDA1EE006D5F0C /* Foundation.framework */; };
+		08D97E9218CDA1EE006D5F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7A18CDA1EE006D5F0C /* UIKit.framework */; };
+		08D97E9A18CDA1EE006D5F0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D97E9818CDA1EE006D5F0C /* InfoPlist.strings */; };
+		08D97E9C18CDA1EE006D5F0C /* HospitalMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97E9B18CDA1EE006D5F0C /* HospitalMobileTests.m */; };
+		08D97EAB18CDAA36006D5F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EAA18CDAA36006D5F0C /* Main.storyboard */; };
+		08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EAF18CDAB0D006D5F0C /* LZMainTabBarController.m */; };
+		08D97EB218CDAC1B006D5F0C /* InfoInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB118CDAC1B006D5F0C /* InfoInput.storyboard */; };
+		08D97EB418CDAC5B006D5F0C /* RegisterAtHospital.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB318CDAC5B006D5F0C /* RegisterAtHospital.storyboard */; };
+		08D97EB618CDACBF006D5F0C /* FeeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB518CDACBF006D5F0C /* FeeList.storyboard */; };
+		08D97EB818CDACE9006D5F0C /* SeeDoctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB718CDACE9006D5F0C /* SeeDoctor.storyboard */; };
+		08D97EBA18CDAD60006D5F0C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB918CDAD60006D5F0C /* Message.storyboard */; };
+		08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */; };
+		08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */; };
+		08D97EC918CDB2FC006D5F0C /* tabbarIconDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EC818CDB2FC006D5F0C /* tabbarIconDefault@2x.png */; };
+		08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ECC18CDB46F006D5F0C /* LZUtility.m */; };
+		08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ECF18CDBE2F006D5F0C /* LZFeeListViewController.m */; };
+		08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */; };
+		08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED518CDC059006D5F0C /* LZMessageViewController.m */; };
+		08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED818CDD2DB006D5F0C /* LZDemoData.m */; };
+		08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08D97E9318CDA1EE006D5F0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08D97E6B18CDA1EE006D5F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08D97E7218CDA1EE006D5F0C;
+			remoteInfo = HospitalMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08D97E7618CDA1EE006D5F0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		08D97E7A18CDA1EE006D5F0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		08D97E7E18CDA1EE006D5F0C /* HospitalMobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HospitalMobile-Info.plist"; sourceTree = "<group>"; };
+		08D97E8018CDA1EE006D5F0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08D97E8218CDA1EE006D5F0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08D97E8418CDA1EE006D5F0C /* HospitalMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HospitalMobile-Prefix.pch"; sourceTree = "<group>"; };
+		08D97E8518CDA1EE006D5F0C /* LZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZAppDelegate.h; sourceTree = "<group>"; };
+		08D97E8618CDA1EE006D5F0C /* LZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZAppDelegate.m; sourceTree = "<group>"; };
+		08D97E8818CDA1EE006D5F0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		08D97E8E18CDA1EE006D5F0C /* HospitalMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HospitalMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08D97E8F18CDA1EE006D5F0C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		08D97E9718CDA1EE006D5F0C /* HospitalMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HospitalMobileTests-Info.plist"; sourceTree = "<group>"; };
+		08D97E9918CDA1EE006D5F0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08D97E9B18CDA1EE006D5F0C /* HospitalMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HospitalMobileTests.m; sourceTree = "<group>"; };
+		08D97EAA18CDAA36006D5F0C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		08D97EAE18CDAB0D006D5F0C /* LZMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMainTabBarController.h; sourceTree = "<group>"; };
+		08D97EAF18CDAB0D006D5F0C /* LZMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMainTabBarController.m; sourceTree = "<group>"; };
+		08D97EB118CDAC1B006D5F0C /* InfoInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoInput.storyboard; sourceTree = "<group>"; };
+		08D97EB318CDAC5B006D5F0C /* RegisterAtHospital.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterAtHospital.storyboard; sourceTree = "<group>"; };
+		08D97EB518CDACBF006D5F0C /* FeeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeeList.storyboard; sourceTree = "<group>"; };
+		08D97EB718CDACE9006D5F0C /* SeeDoctor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeeDoctor.storyboard; sourceTree = "<group>"; };
+		08D97EB918CDAD60006D5F0C /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		08D97EBB18CDAE64006D5F0C /* LZInfoInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInfoInputViewController.h; sourceTree = "<group>"; };
+		08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInfoInputViewController.m; sourceTree = "<group>"; };
+		08D97EBE18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterAtHospitalViewController.h; sourceTree = "<group>"; };
+		08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterAtHospitalViewController.m; sourceTree = "<group>"; };
+		08D97EC818CDB2FC006D5F0C /* tabbarIconDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarIconDefault@2x.png"; sourceTree = "<group>"; };
+		08D97ECB18CDB46F006D5F0C /* LZUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUtility.h; sourceTree = "<group>"; };
+		08D97ECC18CDB46F006D5F0C /* LZUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUtility.m; sourceTree = "<group>"; };
+		08D97ECE18CDBE2F006D5F0C /* LZFeeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFeeListViewController.h; sourceTree = "<group>"; };
+		08D97ECF18CDBE2F006D5F0C /* LZFeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFeeListViewController.m; sourceTree = "<group>"; };
+		08D97ED118CDBF07006D5F0C /* LZSeeDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSeeDoctorViewController.h; sourceTree = "<group>"; };
+		08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSeeDoctorViewController.m; sourceTree = "<group>"; };
+		08D97ED418CDC059006D5F0C /* LZMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMessageViewController.h; sourceTree = "<group>"; };
+		08D97ED518CDC059006D5F0C /* LZMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMessageViewController.m; sourceTree = "<group>"; };
+		08D97ED718CDD2DB006D5F0C /* LZDemoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDemoData.h; sourceTree = "<group>"; };
+		08D97ED818CDD2DB006D5F0C /* LZDemoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDemoData.m; sourceTree = "<group>"; };
+		08D97EDB18CDDAA8006D5F0C /* LZZhenHaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZhenHaoCell.h; sourceTree = "<group>"; };
+		08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08D97E7018CDA1EE006D5F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D97E7918CDA1EE006D5F0C /* CoreGraphics.framework in Frameworks */,
+				08D97E7B18CDA1EE006D5F0C /* UIKit.framework in Frameworks */,
+				08D97E7718CDA1EE006D5F0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D97E8B18CDA1EE006D5F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D97E9018CDA1EE006D5F0C /* XCTest.framework in Frameworks */,
+				08D97E9218CDA1EE006D5F0C /* UIKit.framework in Frameworks */,
+				08D97E9118CDA1EE006D5F0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08D97E6A18CDA1EE006D5F0C = {
+			isa = PBXGroup;
+			children = (
+				08D97E7C18CDA1EE006D5F0C /* HospitalMobile */,
+				08D97E9518CDA1EE006D5F0C /* HospitalMobileTests */,
+				08D97E7518CDA1EE006D5F0C /* Frameworks */,
+				08D97E7418CDA1EE006D5F0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08D97E7418CDA1EE006D5F0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */,
+				08D97E8E18CDA1EE006D5F0C /* HospitalMobileTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08D97E7518CDA1EE006D5F0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08D97E7618CDA1EE006D5F0C /* Foundation.framework */,
+				08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */,
+				08D97E7A18CDA1EE006D5F0C /* UIKit.framework */,
+				08D97E8F18CDA1EE006D5F0C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08D97E7C18CDA1EE006D5F0C /* HospitalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EAC18CDAAA0006D5F0C /* code */,
+				08D97EA918CDAA36006D5F0C /* UIDesign */,
+				08D97E8518CDA1EE006D5F0C /* LZAppDelegate.h */,
+				08D97E8618CDA1EE006D5F0C /* LZAppDelegate.m */,
+				08D97E8818CDA1EE006D5F0C /* Images.xcassets */,
+				08D97EC618CDB2FC006D5F0C /* res */,
+				08D97E7D18CDA1EE006D5F0C /* Supporting Files */,
+			);
+			path = HospitalMobile;
+			sourceTree = "<group>";
+		};
+		08D97E7D18CDA1EE006D5F0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08D97E7E18CDA1EE006D5F0C /* HospitalMobile-Info.plist */,
+				08D97E7F18CDA1EE006D5F0C /* InfoPlist.strings */,
+				08D97E8218CDA1EE006D5F0C /* main.m */,
+				08D97E8418CDA1EE006D5F0C /* HospitalMobile-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08D97E9518CDA1EE006D5F0C /* HospitalMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				08D97E9B18CDA1EE006D5F0C /* HospitalMobileTests.m */,
+				08D97E9618CDA1EE006D5F0C /* Supporting Files */,
+			);
+			path = HospitalMobileTests;
+			sourceTree = "<group>";
+		};
+		08D97E9618CDA1EE006D5F0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08D97E9718CDA1EE006D5F0C /* HospitalMobileTests-Info.plist */,
+				08D97E9818CDA1EE006D5F0C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08D97EA918CDAA36006D5F0C /* UIDesign */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EAA18CDAA36006D5F0C /* Main.storyboard */,
+				08D97EB118CDAC1B006D5F0C /* InfoInput.storyboard */,
+				08D97EB318CDAC5B006D5F0C /* RegisterAtHospital.storyboard */,
+				08D97EB518CDACBF006D5F0C /* FeeList.storyboard */,
+				08D97EB718CDACE9006D5F0C /* SeeDoctor.storyboard */,
+				08D97EB918CDAD60006D5F0C /* Message.storyboard */,
+			);
+			path = UIDesign;
+			sourceTree = "<group>";
+		};
+		08D97EAC18CDAAA0006D5F0C /* code */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EDA18CDDA2C006D5F0C /* cell */,
+				08D97ECA18CDB42F006D5F0C /* utility */,
+				08D97EAD18CDAAA0006D5F0C /* Controller */,
+			);
+			path = code;
+			sourceTree = "<group>";
+		};
+		08D97EAD18CDAAA0006D5F0C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EAE18CDAB0D006D5F0C /* LZMainTabBarController.h */,
+				08D97EAF18CDAB0D006D5F0C /* LZMainTabBarController.m */,
+				08D97EBB18CDAE64006D5F0C /* LZInfoInputViewController.h */,
+				08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */,
+				08D97EBE18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.h */,
+				08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */,
+				08D97ECE18CDBE2F006D5F0C /* LZFeeListViewController.h */,
+				08D97ECF18CDBE2F006D5F0C /* LZFeeListViewController.m */,
+				08D97ED118CDBF07006D5F0C /* LZSeeDoctorViewController.h */,
+				08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */,
+				08D97ED418CDC059006D5F0C /* LZMessageViewController.h */,
+				08D97ED518CDC059006D5F0C /* LZMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		08D97EC618CDB2FC006D5F0C /* res */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EC718CDB2FC006D5F0C /* image */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		08D97EC718CDB2FC006D5F0C /* image */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EC818CDB2FC006D5F0C /* tabbarIconDefault@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		08D97ECA18CDB42F006D5F0C /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				08D97ECB18CDB46F006D5F0C /* LZUtility.h */,
+				08D97ECC18CDB46F006D5F0C /* LZUtility.m */,
+				08D97ED718CDD2DB006D5F0C /* LZDemoData.h */,
+				08D97ED818CDD2DB006D5F0C /* LZDemoData.m */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		08D97EDA18CDDA2C006D5F0C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				08D97EDB18CDDAA8006D5F0C /* LZZhenHaoCell.h */,
+				08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		08D97E7218CDA1EE006D5F0C /* HospitalMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08D97E9F18CDA1EE006D5F0C /* Build configuration list for PBXNativeTarget "HospitalMobile" */;
+			buildPhases = (
+				08D97E6F18CDA1EE006D5F0C /* Sources */,
+				08D97E7018CDA1EE006D5F0C /* Frameworks */,
+				08D97E7118CDA1EE006D5F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HospitalMobile;
+			productName = HospitalMobile;
+			productReference = 08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		08D97E8D18CDA1EE006D5F0C /* HospitalMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08D97EA218CDA1EE006D5F0C /* Build configuration list for PBXNativeTarget "HospitalMobileTests" */;
+			buildPhases = (
+				08D97E8A18CDA1EE006D5F0C /* Sources */,
+				08D97E8B18CDA1EE006D5F0C /* Frameworks */,
+				08D97E8C18CDA1EE006D5F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08D97E9418CDA1EE006D5F0C /* PBXTargetDependency */,
+			);
+			name = HospitalMobileTests;
+			productName = HospitalMobileTests;
+			productReference = 08D97E8E18CDA1EE006D5F0C /* HospitalMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08D97E6B18CDA1EE006D5F0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Yasofon;
+				TargetAttributes = {
+					08D97E8D18CDA1EE006D5F0C = {
+						TestTargetID = 08D97E7218CDA1EE006D5F0C;
+					};
+				};
+			};
+			buildConfigurationList = 08D97E6E18CDA1EE006D5F0C /* Build configuration list for PBXProject "HospitalMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08D97E6A18CDA1EE006D5F0C;
+			productRefGroup = 08D97E7418CDA1EE006D5F0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08D97E7218CDA1EE006D5F0C /* HospitalMobile */,
+				08D97E8D18CDA1EE006D5F0C /* HospitalMobileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		08D97E7118CDA1EE006D5F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D97EB418CDAC5B006D5F0C /* RegisterAtHospital.storyboard in Resources */,
+				08D97EB618CDACBF006D5F0C /* FeeList.storyboard in Resources */,
+				08D97EB818CDACE9006D5F0C /* SeeDoctor.storyboard in Resources */,
+				08D97EC918CDB2FC006D5F0C /* tabbarIconDefault@2x.png in Resources */,
+				08D97EAB18CDAA36006D5F0C /* Main.storyboard in Resources */,
+				08D97E8118CDA1EE006D5F0C /* InfoPlist.strings in Resources */,
+				08D97E8918CDA1EE006D5F0C /* Images.xcassets in Resources */,
+				08D97EBA18CDAD60006D5F0C /* Message.storyboard in Resources */,
+				08D97EB218CDAC1B006D5F0C /* InfoInput.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D97E8C18CDA1EE006D5F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D97E9A18CDA1EE006D5F0C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08D97E6F18CDA1EE006D5F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
+				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
+				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
+				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
+				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
+				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,
+				08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */,
+				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
+				08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */,
+				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
+				08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D97E8A18CDA1EE006D5F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D97E9C18CDA1EE006D5F0C /* HospitalMobileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08D97E9418CDA1EE006D5F0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08D97E7218CDA1EE006D5F0C /* HospitalMobile */;
+			targetProxy = 08D97E9318CDA1EE006D5F0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		08D97E7F18CDA1EE006D5F0C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08D97E8018CDA1EE006D5F0C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		08D97E9818CDA1EE006D5F0C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08D97E9918CDA1EE006D5F0C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		08D97E9D18CDA1EE006D5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		08D97E9E18CDA1EE006D5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08D97EA018CDA1EE006D5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
+				INFOPLIST_FILE = "HospitalMobile/HospitalMobile-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		08D97EA118CDA1EE006D5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
+				INFOPLIST_FILE = "HospitalMobile/HospitalMobile-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		08D97EA318CDA1EE006D5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HospitalMobile.app/HospitalMobile";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HospitalMobileTests/HospitalMobileTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		08D97EA418CDA1EE006D5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HospitalMobile.app/HospitalMobile";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
+				INFOPLIST_FILE = "HospitalMobileTests/HospitalMobileTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08D97E6E18CDA1EE006D5F0C /* Build configuration list for PBXProject "HospitalMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08D97E9D18CDA1EE006D5F0C /* Debug */,
+				08D97E9E18CDA1EE006D5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08D97E9F18CDA1EE006D5F0C /* Build configuration list for PBXNativeTarget "HospitalMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08D97EA018CDA1EE006D5F0C /* Debug */,
+				08D97EA118CDA1EE006D5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08D97EA218CDA1EE006D5F0C /* Build configuration list for PBXNativeTarget "HospitalMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08D97EA318CDA1EE006D5F0C /* Debug */,
+				08D97EA418CDA1EE006D5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08D97E6B18CDA1EE006D5F0C /* Project object */;
+}
