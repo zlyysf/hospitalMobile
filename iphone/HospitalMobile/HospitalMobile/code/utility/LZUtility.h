@@ -14,4 +14,6 @@
 +(BOOL)is_IOS7_OR_LATER;
 +(void)SetSubViewExternNone:(UIViewController *)viewController;
 
++(NSString *)getDaySpanName:(NSDate*)dt;
+
 @end

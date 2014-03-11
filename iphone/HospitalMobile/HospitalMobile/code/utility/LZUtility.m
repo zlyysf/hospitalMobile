@@ -36,4 +36,22 @@
     }
 }
 
++(NSString *)getDaySpanName:(NSDate*)dt
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSHourCalendarUnit|NSMinuteCalendarUnit;
+    NSDateComponents * currentComp = [calendar components:unitFlags fromDate:dt];
+    int hour = [currentComp hour];//([currentComp hour]+ ([currentComp minute]>0?1:0))%24;
+    if (hour < 12)
+    {
+        return @"上午";
+    }
+    else
+    {
+        return @"下午";
+    }
+}
+
+
 @end

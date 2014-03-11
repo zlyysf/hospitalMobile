@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZSeeDoctorViewController : UITableViewController
+@interface LZSeeDoctorViewController : UITableViewController<UITableViewDelegate>
 
 @end

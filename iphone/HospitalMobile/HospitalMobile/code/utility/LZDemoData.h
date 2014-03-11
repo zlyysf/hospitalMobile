@@ -14,6 +14,7 @@
 -(NSMutableDictionary *)get_patientInfo;
 -(void)set_patientInfo:(NSDictionary*)patientInfo;
 
--(NSArray *)get_zhenhaoSimpleAry;
+//-(NSArray *)get_zhenhaoSimpleAry;
+-(NSArray *)get_zhenhaoAry;
 
 @end

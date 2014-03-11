@@ -16,8 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelSeq;
 
-
-
+@property (weak, nonatomic) IBOutlet UILabel *labelDate;
 
 
 

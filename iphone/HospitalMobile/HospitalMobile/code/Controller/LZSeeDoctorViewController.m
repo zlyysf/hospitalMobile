@@ -9,6 +9,7 @@
 #import "LZSeeDoctorViewController.h"
 #import "LZZhenHaoCell.h"
 #import "LZDemoData.h"
+#import "LZUtility.h"
 
 @interface LZSeeDoctorViewController ()
 
@@ -31,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    zhenhaoAry = [[LZDemoData singleton]get_zhenhaoSimpleAry];
+    zhenhaoAry = [[LZDemoData singleton]get_zhenhaoAry];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,10 +68,27 @@
     NSDictionary *zhenhao = zhenhaoAry[rowPos];
     
     cell.labelDaiFu.text = zhenhao[@"daifu"];
-    cell.labelKeShi.text = zhenhao[@"keshi"];
+    cell.labelKeShi.text = zhenhao[@"department"];
     cell.labelSeq.text = [NSString stringWithFormat:@"%@",zhenhao[@"seq"] ];
     
+    NSDate *dtRegisterTime = zhenhao[@"RegisterTime"];
+    NSDateFormatter *dtfmt = [[NSDateFormatter alloc]init];
+    [dtfmt setDateFormat:@"yyyy年MM月dd日"];
+    NSString *sRegisterDate = [dtfmt stringFromDate:dtRegisterTime];
+    cell.labelDate.text = [NSString stringWithFormat:@"%@ %@",sRegisterDate,[LZUtility getDaySpanName:dtRegisterTime]];
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 65;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int rowPos = indexPath.row;
+    NSDictionary *zhenhao = zhenhaoAry[rowPos];
+    //.............
 }
 
 /*
