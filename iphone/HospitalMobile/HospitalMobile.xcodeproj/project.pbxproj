@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */; };
+		08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */; };
+		08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */; };
 		08D97E7718CDA1EE006D5F0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7618CDA1EE006D5F0C /* Foundation.framework */; };
 		08D97E7918CDA1EE006D5F0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */; };
 		08D97E7B18CDA1EE006D5F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7A18CDA1EE006D5F0C /* UIKit.framework */; };
@@ -48,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C7EFD218CF26BB00159471 /* LZZhenHaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZhenHaoViewController.h; sourceTree = "<group>"; };
+		08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoViewController.m; sourceTree = "<group>"; };
+		08C7EFD518CF28AE00159471 /* LZCheckResultTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckResultTextViewController.h; sourceTree = "<group>"; };
+		08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCheckResultTextViewController.m; sourceTree = "<group>"; };
+		08C7EFD818CF28E600159471 /* LZCheckResultImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckResultImageViewController.h; sourceTree = "<group>"; };
+		08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCheckResultImageViewController.m; sourceTree = "<group>"; };
 		08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D97E7618CDA1EE006D5F0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -226,6 +235,12 @@
 				08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */,
 				08D97ED418CDC059006D5F0C /* LZMessageViewController.h */,
 				08D97ED518CDC059006D5F0C /* LZMessageViewController.m */,
+				08C7EFD218CF26BB00159471 /* LZZhenHaoViewController.h */,
+				08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */,
+				08C7EFD518CF28AE00159471 /* LZCheckResultTextViewController.h */,
+				08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */,
+				08C7EFD818CF28E600159471 /* LZCheckResultImageViewController.h */,
+				08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */,
 				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
 				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
 				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
@@ -376,9 +392,11 @@
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
 				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,
 				08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */,
+				08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */,
 				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
 				08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
+				08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */,
 				08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +598,7 @@
 				08D97EA118CDA1EE006D5F0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08D97EA218CDA1EE006D5F0C /* Build configuration list for PBXNativeTarget "HospitalMobileTests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +607,7 @@
 				08D97EA418CDA1EE006D5F0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
