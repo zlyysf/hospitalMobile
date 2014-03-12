@@ -44,6 +44,7 @@
 		08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED518CDC059006D5F0C /* LZMessageViewController.m */; };
 		08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED818CDD2DB006D5F0C /* LZDemoData.m */; };
 		08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */; };
+		B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		08D97ED818CDD2DB006D5F0C /* LZDemoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDemoData.m; sourceTree = "<group>"; };
 		08D97EDB18CDDAA8006D5F0C /* LZZhenHaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZhenHaoCell.h; sourceTree = "<group>"; };
 		08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoCell.m; sourceTree = "<group>"; };
+		B9A2F70E18D1127E0019277B /* LZInfoInputTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInfoInputTableViewController.h; sourceTree = "<group>"; };
+		B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInfoInputTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +257,8 @@
 			children = (
 				08D97EAE18CDAB0D006D5F0C /* LZMainTabBarController.h */,
 				08D97EAF18CDAB0D006D5F0C /* LZMainTabBarController.m */,
+				B9A2F70E18D1127E0019277B /* LZInfoInputTableViewController.h */,
+				B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */,
 				08D97EBB18CDAE64006D5F0C /* LZInfoInputViewController.h */,
 				08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */,
 				08D97EBE18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.h */,
@@ -430,6 +435,7 @@
 				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
 				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
 				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
+				B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */,
 				08C7EFF018D064EA00159471 /* LZKeyboardToolBarToHideKB.m in Sources */,
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,

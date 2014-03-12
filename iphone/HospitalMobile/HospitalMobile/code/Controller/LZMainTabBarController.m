@@ -7,7 +7,7 @@
 //
 
 #import "LZMainTabBarController.h"
-#import "LZInfoInputViewController.h"
+#import "LZInfoInputTableViewController.h"
 #import "LZRegisterAtHospitalViewController.h"
 #import "LZFeeListViewController.h"
 #import "LZSeeDoctorViewController.h"
@@ -38,10 +38,10 @@
     UITabBarItem *tabBarItem;
     
     UIStoryboard *sbInfoInput = [UIStoryboard storyboardWithName:@"InfoInput" bundle:nil];
-    LZInfoInputViewController *InfoInputViewController = [sbInfoInput instantiateViewControllerWithIdentifier:@"LZInfoInputViewController"];
+    LZInfoInputTableViewController *InfoInputViewController = [sbInfoInput instantiateViewControllerWithIdentifier:@"LZInfoInputTableViewController"];
     nav = [[ UINavigationController alloc] initWithRootViewController:InfoInputViewController];
     nav.navigationBar.translucent = NO;
-    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"信息录入" image:[UIImage imageNamed:@"tabbarIconDefault.png"] tag:0];
+    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"信息" image:[UIImage imageNamed:@"tabbarIconDefault.png"] tag:0];
     nav.tabBarItem = tabBarItem;
     [controllers addObject:nav];
     
