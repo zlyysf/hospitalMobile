@@ -10,6 +10,12 @@
 		08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */; };
 		08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */; };
 		08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */; };
+		08C7EFDD18D006D600159471 /* LZQueuePlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFDC18D006D600159471 /* LZQueuePlaceCell.m */; };
+		08C7EFE018D00A2300159471 /* LZCurrentDiseaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFDF18D00A2300159471 /* LZCurrentDiseaseCell.m */; };
+		08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFE218D011E300159471 /* LZCheckResultCell.m */; };
+		08C7EFE618D022DF00159471 /* LZPrescribeMedicineItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFE518D022DF00159471 /* LZPrescribeMedicineItemCell.m */; };
+		08C7EFE918D024AE00159471 /* LZDoctorAdviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFE818D024AE00159471 /* LZDoctorAdviceCell.m */; };
+		08C7EFF018D064EA00159471 /* LZKeyboardToolBarToHideKB.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFEF18D064EA00159471 /* LZKeyboardToolBarToHideKB.m */; };
 		08D97E7718CDA1EE006D5F0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7618CDA1EE006D5F0C /* Foundation.framework */; };
 		08D97E7918CDA1EE006D5F0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */; };
 		08D97E7B18CDA1EE006D5F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7A18CDA1EE006D5F0C /* UIKit.framework */; };
@@ -57,6 +63,19 @@
 		08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCheckResultTextViewController.m; sourceTree = "<group>"; };
 		08C7EFD818CF28E600159471 /* LZCheckResultImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckResultImageViewController.h; sourceTree = "<group>"; };
 		08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCheckResultImageViewController.m; sourceTree = "<group>"; };
+		08C7EFDB18D006D600159471 /* LZQueuePlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZQueuePlaceCell.h; sourceTree = "<group>"; };
+		08C7EFDC18D006D600159471 /* LZQueuePlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZQueuePlaceCell.m; sourceTree = "<group>"; };
+		08C7EFDE18D00A2300159471 /* LZCurrentDiseaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCurrentDiseaseCell.h; sourceTree = "<group>"; };
+		08C7EFDF18D00A2300159471 /* LZCurrentDiseaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCurrentDiseaseCell.m; sourceTree = "<group>"; };
+		08C7EFE118D011E300159471 /* LZCheckResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckResultCell.h; sourceTree = "<group>"; };
+		08C7EFE218D011E300159471 /* LZCheckResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCheckResultCell.m; sourceTree = "<group>"; };
+		08C7EFE418D022DF00159471 /* LZPrescribeMedicineItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPrescribeMedicineItemCell.h; sourceTree = "<group>"; };
+		08C7EFE518D022DF00159471 /* LZPrescribeMedicineItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPrescribeMedicineItemCell.m; sourceTree = "<group>"; };
+		08C7EFE718D024AE00159471 /* LZDoctorAdviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDoctorAdviceCell.h; sourceTree = "<group>"; };
+		08C7EFE818D024AE00159471 /* LZDoctorAdviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDoctorAdviceCell.m; sourceTree = "<group>"; };
+		08C7EFEE18D064EA00159471 /* LZKeyboardToolBarToHideKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZKeyboardToolBarToHideKB.h; sourceTree = "<group>"; };
+		08C7EFEF18D064EA00159471 /* LZKeyboardToolBarToHideKB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZKeyboardToolBarToHideKB.m; sourceTree = "<group>"; };
+		08C7EFF218D07C7300159471 /* LZConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConstant.h; sourceTree = "<group>"; };
 		08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D97E7618CDA1EE006D5F0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08C7EFEA18D059D400159471 /* libUI */ = {
+			isa = PBXGroup;
+			children = (
+				08C7EFEE18D064EA00159471 /* LZKeyboardToolBarToHideKB.h */,
+				08C7EFEF18D064EA00159471 /* LZKeyboardToolBarToHideKB.m */,
+			);
+			path = libUI;
+			sourceTree = "<group>";
+		};
 		08D97E6A18CDA1EE006D5F0C = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +241,7 @@
 		08D97EAC18CDAAA0006D5F0C /* code */ = {
 			isa = PBXGroup;
 			children = (
+				08C7EFEA18D059D400159471 /* libUI */,
 				08D97EDA18CDDA2C006D5F0C /* cell */,
 				08D97ECA18CDB42F006D5F0C /* utility */,
 				08D97EAD18CDAAA0006D5F0C /* Controller */,
@@ -264,6 +293,7 @@
 		08D97ECA18CDB42F006D5F0C /* utility */ = {
 			isa = PBXGroup;
 			children = (
+				08C7EFF218D07C7300159471 /* LZConstant.h */,
 				08D97ECB18CDB46F006D5F0C /* LZUtility.h */,
 				08D97ECC18CDB46F006D5F0C /* LZUtility.m */,
 				08D97ED718CDD2DB006D5F0C /* LZDemoData.h */,
@@ -277,6 +307,16 @@
 			children = (
 				08D97EDB18CDDAA8006D5F0C /* LZZhenHaoCell.h */,
 				08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */,
+				08C7EFDB18D006D600159471 /* LZQueuePlaceCell.h */,
+				08C7EFDC18D006D600159471 /* LZQueuePlaceCell.m */,
+				08C7EFDE18D00A2300159471 /* LZCurrentDiseaseCell.h */,
+				08C7EFDF18D00A2300159471 /* LZCurrentDiseaseCell.m */,
+				08C7EFE118D011E300159471 /* LZCheckResultCell.h */,
+				08C7EFE218D011E300159471 /* LZCheckResultCell.m */,
+				08C7EFE418D022DF00159471 /* LZPrescribeMedicineItemCell.h */,
+				08C7EFE518D022DF00159471 /* LZPrescribeMedicineItemCell.m */,
+				08C7EFE718D024AE00159471 /* LZDoctorAdviceCell.h */,
+				08C7EFE818D024AE00159471 /* LZDoctorAdviceCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -384,17 +424,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C7EFE918D024AE00159471 /* LZDoctorAdviceCell.m in Sources */,
+				08C7EFE618D022DF00159471 /* LZPrescribeMedicineItemCell.m in Sources */,
 				08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */,
 				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
 				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
 				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
+				08C7EFF018D064EA00159471 /* LZKeyboardToolBarToHideKB.m in Sources */,
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
 				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,
 				08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */,
+				08C7EFE018D00A2300159471 /* LZCurrentDiseaseCell.m in Sources */,
+				08C7EFDD18D006D600159471 /* LZQueuePlaceCell.m in Sources */,
 				08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */,
 				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
 				08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */,
+				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
 				08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */,
 				08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */,

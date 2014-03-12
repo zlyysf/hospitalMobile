@@ -49,9 +49,11 @@
     NSMutableDictionary *zhenhao1jiaofei, *jiancha1jiaofei,*zhenhao2jiaofei;
     NSMutableDictionary *zhenhao1jiancha1;
     NSMutableDictionary *jiancha1result1detail1;
-    NSMutableArray *jiancha1result1ary;
+    NSMutableArray *jiancha1result1ary, *zhenhao1jianchaAry;
     NSMutableDictionary *zhenhao1yaopin1,*zhenhao1yaopin2;
     NSMutableArray *zhenhao1yaopinAry;
+    
+    NSMutableArray *allJiaofeiAry;
 
 //    NSMutableDictionary *zhenhaoSimple1,*zhenhaoSimple2;
 //    NSMutableArray *zhenhaoSimpleAry;
@@ -91,7 +93,7 @@
     NSDate *dtGuahao = [curCalendar dateFromComponents:dtComponentsLater];
     
     zhenhao1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                @"zhenhao001",@"id", [NSNumber numberWithInt:1 ],@"seq",
+                @"zhenhao001",@"id", [NSNumber numberWithInt:12 ],@"seq",
                 @"创伤脑血管神经外科",@"department",@"张大夫",@"daifu", dtGuahao,@"RegisterTime",
                 @"左侧眼睑不自主抽动3个月",@"patientDiseaseDescription", @"3个月前，无明显诱因出现左侧眼睑不自主抽动",@"patientDiseaseHistory",
                 @"面肌痉挛",@"doctorDiseaseDescription", @"1，3天后复诊。\n2，适当休息。\n3，注意营养饮食。",@"doctorAdvice",
@@ -99,11 +101,11 @@
                 nil];
     
     zhenhao1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"jiaofei001",@"id", @"zhenhao001",@"id_zhenhao",
+                       @"jiaofei001",@"id", @"zhenhao001",@"id_zhenhao", @"zhenhao",@"type",
                        [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
                        nil];
     jiancha1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"jiaofei002",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha001",@"id_jiancha",
+                       @"jiaofei002",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha001",@"id_jiancha", @"jiancha",@"type",
                        [NSNumber numberWithDouble:500.0],@"total", [NSNumber numberWithDouble:150.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
                        nil];
 
@@ -121,12 +123,13 @@
                        nil];
     
     jiancha1result1ary = [NSMutableArray arrayWithObjects:jiancha1result1detail1, nil];
+    zhenhao1jianchaAry = [NSMutableArray arrayWithObjects:zhenhao1jiancha1, nil];
     
     zhenhao1yaopin1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"yaopin001",@"id", @"zhenhao001",@"id_zhenhao", @"药品名称1",@"name",[NSNumber numberWithInt:2],@"amount",
+                       @"yaopin001",@"id", @"zhenhao001",@"id_zhenhao", @"药品名称1",@"name",[NSNumber numberWithInt:2],@"amount", @"盒",@"unit",
                        nil];
     zhenhao1yaopin2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"yaopin002",@"id", @"zhenhao001",@"id_zhenhao", @"药品名称2",@"name",[NSNumber numberWithInt:3],@"amount",
+                       @"yaopin002",@"id", @"zhenhao001",@"id_zhenhao", @"药品名称2",@"name",[NSNumber numberWithInt:3],@"amount", @"支",@"unit",
                        nil];
     zhenhao1yaopinAry = [NSMutableArray arrayWithObjects:zhenhao1yaopin1,zhenhao1yaopin2, nil];
     
@@ -139,11 +142,13 @@
                 @"jiaofei002",@"id_jiaofei",
                 nil];
     zhenhao2jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"jiaofei011",@"id", @"zhenhao002",@"id_zhenhao",
+                       @"jiaofei011",@"id", @"zhenhao002",@"id_zhenhao", @"zhenhao",@"type",
                        [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
                        nil];
 
     zhenhaoAry = [NSMutableArray arrayWithObjects:zhenhao1,zhenhao2, nil];
+    
+    allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,zhenhao2jiaofei, nil];
 
     
 }
@@ -172,6 +177,40 @@
 -(NSArray *)get_zhenhaoAry
 {
     return zhenhaoAry;
+}
+
+-(NSArray *)get_jianchaAryByZhenhao:(NSString*)zhenhaoId
+{
+    if ([@"zhenhao001" isEqualToString:zhenhaoId])
+        return zhenhao1jianchaAry;
+    else
+        return nil;
+}
+-(NSArray *)get_yaopinAryByZhenhao:(NSString*)zhenhaoId
+{
+    if ([@"zhenhao001" isEqualToString:zhenhaoId])
+        return zhenhao1yaopinAry;
+    else
+        return nil;
+}
+
+-(NSDictionary *)get_jiaofeiInfoByZhenhao:(NSString*)zhenhaoId
+{
+    for(int i=0; i<allJiaofeiAry.count; i++){
+        NSDictionary *jiaofeiInfo = allJiaofeiAry[i];
+        if ([@"zhenhao" isEqualToString:jiaofeiInfo[@"type"]] && [zhenhaoId isEqualToString:jiaofeiInfo[@"id_zhenhao"]])
+            return jiaofeiInfo;
+    }
+    return nil;
+}
+-(NSDictionary *)get_jiaofeiInfoByJiancha:(NSString*)jianchaId
+{
+    for(int i=0; i<allJiaofeiAry.count; i++){
+        NSDictionary *jiaofeiInfo = allJiaofeiAry[i];
+        if ([@"jiancha" isEqualToString:jiaofeiInfo[@"type"]] && [jianchaId isEqualToString:jiaofeiInfo[@"id_jiancha"]])
+            return jiaofeiInfo;
+    }
+    return nil;
 }
 
 

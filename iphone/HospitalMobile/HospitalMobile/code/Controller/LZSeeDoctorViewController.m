@@ -7,6 +7,7 @@
 //
 
 #import "LZSeeDoctorViewController.h"
+#import "LZZhenHaoViewController.h"
 #import "LZZhenHaoCell.h"
 #import "LZDemoData.h"
 #import "LZUtility.h"
@@ -88,7 +89,13 @@
 {
     int rowPos = indexPath.row;
     NSDictionary *zhenhao = zhenhaoAry[rowPos];
-    //.............
+    UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
+    LZZhenHaoViewController * ZhenHaoViewController = [sboard instantiateViewControllerWithIdentifier:@"LZZhenHaoViewController"];
+    ZhenHaoViewController.zhenhaoDict = zhenhao;
+    
+    ZhenHaoViewController.title = @"诊号";
+    [self.navigationController pushViewController:ZhenHaoViewController animated:YES];
+    
 }
 
 /*

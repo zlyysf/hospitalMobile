@@ -16,5 +16,10 @@
 
 //-(NSArray *)get_zhenhaoSimpleAry;
 -(NSArray *)get_zhenhaoAry;
+-(NSArray *)get_jianchaAryByZhenhao:(NSString*)zhenhaoId;
+-(NSArray *)get_yaopinAryByZhenhao:(NSString*)zhenhaoId;
+
+-(NSDictionary *)get_jiaofeiInfoByZhenhao:(NSString*)zhenhaoId;
+-(NSDictionary *)get_jiaofeiInfoByJiancha:(NSString*)jianchaId;
 
 @end

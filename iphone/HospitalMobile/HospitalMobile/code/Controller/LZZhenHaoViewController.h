@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZZhenHaoViewController : UITableViewController
+@interface LZZhenHaoViewController : UITableViewController<UITableViewDelegate>
+
+@property (strong,nonatomic)NSDictionary *zhenhaoDict;
 
 @end
