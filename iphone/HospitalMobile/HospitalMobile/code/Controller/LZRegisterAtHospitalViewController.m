@@ -7,8 +7,13 @@
 //
 
 #import "LZRegisterAtHospitalViewController.h"
+#import "LZRegisterHospitalCell.h"
+#import "LZDemoData.h"
+#import "LZRegisterTableViewController.h"
 
 @interface LZRegisterAtHospitalViewController ()
+
+@property (nonatomic, strong) NSArray *mockRegistrationList;
 
 @end
 
@@ -26,13 +31,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.navigationItem.title = @"挂号";
+    self.mockRegistrationList = [[LZDemoData singleton] get_registrationList];
 }
 
-- (void)didReceiveMemoryWarning
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return [self.mockRegistrationList count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"HospitalRegisterCell";
+    LZRegisterHospitalCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSDictionary *registerInfo = self.mockRegistrationList[indexPath.row];
+    cell.departmentLabel.text = registerInfo[@"department"];
+    cell.expertLabel.text = [NSString stringWithFormat:@"专家号：%@", registerInfo[@"expertTickets"]];
+    cell.normalLabel.text = [NSString stringWithFormat:@"普通号：%@", registerInfo[@"normalTickets"]];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 98;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LZRegisterTableViewController *registerViewController = [[LZRegisterTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    registerViewController.registrationInfo = self.mockRegistrationList[indexPath.row];
+    [self.navigationController pushViewController:registerViewController animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 @end

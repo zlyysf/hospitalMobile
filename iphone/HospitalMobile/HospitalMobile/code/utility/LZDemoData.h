@@ -22,4 +22,6 @@
 -(NSDictionary *)get_jiaofeiInfoByZhenhao:(NSString*)zhenhaoId;
 -(NSDictionary *)get_jiaofeiInfoByJiancha:(NSString*)jianchaId;
 
+-(NSArray *)get_registrationList;
+
 @end

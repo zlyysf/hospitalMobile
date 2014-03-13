@@ -57,6 +57,7 @@
 
 //    NSMutableDictionary *zhenhaoSimple1,*zhenhaoSimple2;
 //    NSMutableArray *zhenhaoSimpleAry;
+    NSArray *registrationArray;
 }
 
 +(LZDemoData *)singleton {
@@ -149,6 +150,17 @@
     zhenhaoAry = [NSMutableArray arrayWithObjects:zhenhao1,zhenhao2, nil];
     
     allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,zhenhao2jiaofei, nil];
+    
+    NSDictionary *registration1 = @{@"department":@"产科", @"expertNum":@3, @"normalTickets":@10, @"expertTickets":@5,
+                                    @"expertList":@[@{@"name":@"张大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@1}]};
+    NSDictionary *registration2 = @{@"department":@"脑外科", @"expertNum":@3, @"normalTickets":@8, @"expertTickets":@6,
+                                    @"expertList":@[@{@"name":@"潘大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@2}]};
+    NSDictionary *registration3 = @{@"department":@"呼吸内科", @"expertNum":@4, @"normalTickets":@12, @"expertTickets":@7,
+                                    @"expertList":@[@{@"name":@"黄大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@1}, @{@"name":@"申大夫", @"number":@2}]};
+    NSDictionary *registration4 = @{@"department":@"普外科", @"expertNum":@4, @"normalTickets":@11, @"expertTickets":@8,
+                                    @"expertList":@[@{@"name":@"黄大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@2}, @{@"name":@"申大夫", @"number":@2}]};
+    
+    registrationArray = @[registration1, registration2, registration3, registration4];
 
     
 }
@@ -213,6 +225,10 @@
     return nil;
 }
 
+-(NSArray *)get_registrationList
+{
+    return registrationArray;
+}
 
 @end
 

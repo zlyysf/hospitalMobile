@@ -44,6 +44,8 @@
 		08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED818CDD2DB006D5F0C /* LZDemoData.m */; };
 		08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */; };
 		B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */; };
+		FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13239018D216D200BE900F /* LZRegisterTableViewController.m */; };
+		FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,10 @@
 		08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoCell.m; sourceTree = "<group>"; };
 		B9A2F70E18D1127E0019277B /* LZInfoInputTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInfoInputTableViewController.h; sourceTree = "<group>"; };
 		B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInfoInputTableViewController.m; sourceTree = "<group>"; };
+		FC13238F18D216D200BE900F /* LZRegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterTableViewController.h; sourceTree = "<group>"; };
+		FC13239018D216D200BE900F /* LZRegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterTableViewController.m; sourceTree = "<group>"; };
+		FC9F002B18D1CCE2002B675E /* LZRegisterHospitalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterHospitalCell.h; sourceTree = "<group>"; };
+		FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterHospitalCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +276,8 @@
 				08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */,
 				08C7EFD818CF28E600159471 /* LZCheckResultImageViewController.h */,
 				08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */,
+				FC13238F18D216D200BE900F /* LZRegisterTableViewController.h */,
+				FC13239018D216D200BE900F /* LZRegisterTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -317,6 +325,8 @@
 				08C7EFE518D022DF00159471 /* LZPrescribeMedicineItemCell.m */,
 				08C7EFE718D024AE00159471 /* LZDoctorAdviceCell.h */,
 				08C7EFE818D024AE00159471 /* LZDoctorAdviceCell.m */,
+				FC9F002B18D1CCE2002B675E /* LZRegisterHospitalCell.h */,
+				FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -424,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */,
 				08C7EFE918D024AE00159471 /* LZDoctorAdviceCell.m in Sources */,
 				08C7EFE618D022DF00159471 /* LZPrescribeMedicineItemCell.m in Sources */,
 				08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */,
@@ -431,6 +442,7 @@
 				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
 				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
 				B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */,
+				FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */,
 				08C7EFF018D064EA00159471 /* LZKeyboardToolBarToHideKB.m in Sources */,
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,

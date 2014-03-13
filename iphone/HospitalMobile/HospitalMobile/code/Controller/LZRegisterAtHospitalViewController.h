@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZRegisterAtHospitalViewController : UIViewController
+@interface LZRegisterAtHospitalViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
