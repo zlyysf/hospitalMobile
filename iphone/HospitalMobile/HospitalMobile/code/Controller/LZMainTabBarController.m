@@ -34,17 +34,16 @@
     [super viewDidLoad];
 	
     NSMutableArray *controllers = [NSMutableArray array];
-    UINavigationController *nav;
     UITabBarItem *tabBarItem;
     
     UIStoryboard *sbInfoInput = [UIStoryboard storyboardWithName:@"InfoInput" bundle:nil];
-    LZInfoInputTableViewController *InfoInputViewController = [sbInfoInput instantiateViewControllerWithIdentifier:@"LZInfoInputTableViewController"];
-    nav = [[ UINavigationController alloc] initWithRootViewController:InfoInputViewController];
-    nav.navigationBar.translucent = NO;
-    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"信息" image:[UIImage imageNamed:@"tabbarIconDefault.png"] tag:0];
-    nav.tabBarItem = tabBarItem;
-    [controllers addObject:nav];
+    UINavigationController *infoInputNavigationController = [sbInfoInput instantiateViewControllerWithIdentifier:@"UIInfoInputNavigationController"];
+    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"信息" image:[UIImage imageNamed:@"infoinput.png"] tag:0];
+    infoInputNavigationController.tabBarItem = tabBarItem;
+    [controllers addObject:infoInputNavigationController];
+
     
+    UINavigationController *nav;
     UIStoryboard *sbRegisterAtHospital = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZRegisterAtHospitalViewController *RegisterAtHospitalViewController = [sbRegisterAtHospital instantiateViewControllerWithIdentifier:@"LZRegisterAtHospitalViewController"];
     nav = [[ UINavigationController alloc] initWithRootViewController:RegisterAtHospitalViewController];
@@ -57,7 +56,7 @@
     LZFeeListViewController *FeeListViewController = [sbFeeList instantiateViewControllerWithIdentifier:@"LZFeeListViewController"];
     nav = [[ UINavigationController alloc] initWithRootViewController:FeeListViewController];
     nav.navigationBar.translucent = NO;
-    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"交费" image:[UIImage imageNamed:@"tabbarIconDefault.png"] tag:1];
+    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"交费" image:[UIImage imageNamed:@"cash.png"] tag:1];
     nav.tabBarItem = tabBarItem;
     [controllers addObject:nav];
     
@@ -65,17 +64,14 @@
     LZSeeDoctorViewController *SeeDoctorViewController = [sbSeeDoctor instantiateViewControllerWithIdentifier:@"LZSeeDoctorViewController"];
     nav = [[ UINavigationController alloc] initWithRootViewController:SeeDoctorViewController];
     nav.navigationBar.translucent = NO;
-    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"看病" image:[UIImage imageNamed:@"tabbarIconDefault.png"] tag:1];
+    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"看病" image:[UIImage imageNamed:@"exam.png"] tag:1];
     nav.tabBarItem = tabBarItem;
     [controllers addObject:nav];
     
     UIStoryboard *sbMessage = [UIStoryboard storyboardWithName:@"Message" bundle:nil];
-    LZMessageViewController *MessageViewController = [sbMessage instantiateViewControllerWithIdentifier:@"LZMessageViewController"];
-    nav = [[ UINavigationController alloc] initWithRootViewController:MessageViewController];
-    nav.navigationBar.translucent = NO;
-    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"消息管理" image:[UIImage imageNamed:@"tabbarIconDefault.png"] tag:1];
-    nav.tabBarItem = tabBarItem;
-    [controllers addObject:nav];
+    UINavigationController *messageNavigationController = [sbMessage instantiateViewControllerWithIdentifier:@"LZUIMessageNavigationController"];
+    messageNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"交流" image:[UIImage imageNamed:@"message.png"] tag:1];
+    [controllers addObject:messageNavigationController];
     
     self.viewControllers = controllers;
 //    if ([LZUtility is_IOS7_OR_LATER])

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZInfoInputTableViewController : UITableViewController
+@interface LZInfoInputTableViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate>
+
+
+- (IBAction)doSave:(UIBarButtonItem *)sender;
 
 @end

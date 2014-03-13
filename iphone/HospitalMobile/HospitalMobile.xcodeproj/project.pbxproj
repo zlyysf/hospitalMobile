@@ -40,9 +40,19 @@
 		08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ECC18CDB46F006D5F0C /* LZUtility.m */; };
 		08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ECF18CDBE2F006D5F0C /* LZFeeListViewController.m */; };
 		08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */; };
-		08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED518CDC059006D5F0C /* LZMessageViewController.m */; };
 		08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ED818CDD2DB006D5F0C /* LZDemoData.m */; };
 		08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */; };
+		B920B9BF18D251C000524445 /* infoinput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9BE18D251C000524445 /* infoinput@2x.png */; };
+		B920B9C118D2524300524445 /* exam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9C018D2524300524445 /* exam@2x.png */; };
+		B920B9C318D252A400524445 /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9C218D252A400524445 /* message@2x.png */; };
+		B920B9C518D2540800524445 /* cash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9C418D2540800524445 /* cash@2x.png */; };
+		B920B9C918D2578600524445 /* doctor_pan.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9C618D2578600524445 /* doctor_pan.png */; };
+		B920B9CA18D2578600524445 /* doctor_a.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9C718D2578600524445 /* doctor_a.png */; };
+		B920B9CB18D2578600524445 /* doctor_b.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9C818D2578600524445 /* doctor_b.png */; };
+		B920B9CE18D2638200524445 /* LZMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B920B9CD18D2638200524445 /* LZMessageViewController.m */; };
+		B920B9D018D26D4F00524445 /* horn.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9CF18D26D4F00524445 /* horn.png */; };
+		B920B9D218D26E1200524445 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9D118D26E1200524445 /* happy.png */; };
+		B920B9D418D26E8100524445 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9D318D26E8100524445 /* plus.png */; };
 		B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */; };
 		FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13239018D216D200BE900F /* LZRegisterTableViewController.m */; };
 		FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */; };
@@ -111,12 +121,22 @@
 		08D97ECF18CDBE2F006D5F0C /* LZFeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFeeListViewController.m; sourceTree = "<group>"; };
 		08D97ED118CDBF07006D5F0C /* LZSeeDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSeeDoctorViewController.h; sourceTree = "<group>"; };
 		08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSeeDoctorViewController.m; sourceTree = "<group>"; };
-		08D97ED418CDC059006D5F0C /* LZMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMessageViewController.h; sourceTree = "<group>"; };
-		08D97ED518CDC059006D5F0C /* LZMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMessageViewController.m; sourceTree = "<group>"; };
 		08D97ED718CDD2DB006D5F0C /* LZDemoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDemoData.h; sourceTree = "<group>"; };
 		08D97ED818CDD2DB006D5F0C /* LZDemoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDemoData.m; sourceTree = "<group>"; };
 		08D97EDB18CDDAA8006D5F0C /* LZZhenHaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZhenHaoCell.h; sourceTree = "<group>"; };
 		08D97EDC18CDDAA8006D5F0C /* LZZhenHaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoCell.m; sourceTree = "<group>"; };
+		B920B9BE18D251C000524445 /* infoinput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoinput@2x.png"; sourceTree = "<group>"; };
+		B920B9C018D2524300524445 /* exam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exam@2x.png"; sourceTree = "<group>"; };
+		B920B9C218D252A400524445 /* message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@2x.png"; sourceTree = "<group>"; };
+		B920B9C418D2540800524445 /* cash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cash@2x.png"; sourceTree = "<group>"; };
+		B920B9C618D2578600524445 /* doctor_pan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor_pan.png; sourceTree = "<group>"; };
+		B920B9C718D2578600524445 /* doctor_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor_a.png; sourceTree = "<group>"; };
+		B920B9C818D2578600524445 /* doctor_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor_b.png; sourceTree = "<group>"; };
+		B920B9CC18D2638200524445 /* LZMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMessageViewController.h; sourceTree = "<group>"; };
+		B920B9CD18D2638200524445 /* LZMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMessageViewController.m; sourceTree = "<group>"; };
+		B920B9CF18D26D4F00524445 /* horn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horn.png; sourceTree = "<group>"; };
+		B920B9D118D26E1200524445 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		B920B9D318D26E8100524445 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		B9A2F70E18D1127E0019277B /* LZInfoInputTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInfoInputTableViewController.h; sourceTree = "<group>"; };
 		B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInfoInputTableViewController.m; sourceTree = "<group>"; };
 		FC13238F18D216D200BE900F /* LZRegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterTableViewController.h; sourceTree = "<group>"; };
@@ -262,14 +282,14 @@
 				08D97EAF18CDAB0D006D5F0C /* LZMainTabBarController.m */,
 				B9A2F70E18D1127E0019277B /* LZInfoInputTableViewController.h */,
 				B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */,
+				B920B9CC18D2638200524445 /* LZMessageViewController.h */,
+				B920B9CD18D2638200524445 /* LZMessageViewController.m */,
 				08D97EBE18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.h */,
 				08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */,
 				08D97ECE18CDBE2F006D5F0C /* LZFeeListViewController.h */,
 				08D97ECF18CDBE2F006D5F0C /* LZFeeListViewController.m */,
 				08D97ED118CDBF07006D5F0C /* LZSeeDoctorViewController.h */,
 				08D97ED218CDBF07006D5F0C /* LZSeeDoctorViewController.m */,
-				08D97ED418CDC059006D5F0C /* LZMessageViewController.h */,
-				08D97ED518CDC059006D5F0C /* LZMessageViewController.m */,
 				08C7EFD218CF26BB00159471 /* LZZhenHaoViewController.h */,
 				08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */,
 				08C7EFD518CF28AE00159471 /* LZCheckResultTextViewController.h */,
@@ -293,6 +313,16 @@
 		08D97EC718CDB2FC006D5F0C /* image */ = {
 			isa = PBXGroup;
 			children = (
+				B920B9D318D26E8100524445 /* plus.png */,
+				B920B9D118D26E1200524445 /* happy.png */,
+				B920B9CF18D26D4F00524445 /* horn.png */,
+				B920B9C618D2578600524445 /* doctor_pan.png */,
+				B920B9C718D2578600524445 /* doctor_a.png */,
+				B920B9C818D2578600524445 /* doctor_b.png */,
+				B920B9C418D2540800524445 /* cash@2x.png */,
+				B920B9C218D252A400524445 /* message@2x.png */,
+				B920B9C018D2524300524445 /* exam@2x.png */,
+				B920B9BE18D251C000524445 /* infoinput@2x.png */,
 				08D97EC818CDB2FC006D5F0C /* tabbarIconDefault@2x.png */,
 			);
 			path = image;
@@ -408,14 +438,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				08D97EB418CDAC5B006D5F0C /* RegisterAtHospital.storyboard in Resources */,
+				B920B9CA18D2578600524445 /* doctor_a.png in Resources */,
 				08D97EB618CDACBF006D5F0C /* FeeList.storyboard in Resources */,
+				B920B9C918D2578600524445 /* doctor_pan.png in Resources */,
 				08D97EB818CDACE9006D5F0C /* SeeDoctor.storyboard in Resources */,
 				08D97EC918CDB2FC006D5F0C /* tabbarIconDefault@2x.png in Resources */,
+				B920B9C318D252A400524445 /* message@2x.png in Resources */,
 				08D97EAB18CDAA36006D5F0C /* Main.storyboard in Resources */,
+				B920B9D218D26E1200524445 /* happy.png in Resources */,
 				08D97E8118CDA1EE006D5F0C /* InfoPlist.strings in Resources */,
 				08D97E8918CDA1EE006D5F0C /* Images.xcassets in Resources */,
 				08D97EBA18CDAD60006D5F0C /* Message.storyboard in Resources */,
+				B920B9D418D26E8100524445 /* plus.png in Resources */,
+				B920B9CB18D2578600524445 /* doctor_b.png in Resources */,
 				08D97EB218CDAC1B006D5F0C /* InfoInput.storyboard in Resources */,
+				B920B9BF18D251C000524445 /* infoinput@2x.png in Resources */,
+				B920B9C518D2540800524445 /* cash@2x.png in Resources */,
+				B920B9D018D26D4F00524445 /* horn.png in Resources */,
+				B920B9C118D2524300524445 /* exam@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +476,7 @@
 			files = (
 				FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */,
 				08C7EFE918D024AE00159471 /* LZDoctorAdviceCell.m in Sources */,
+				B920B9CE18D2638200524445 /* LZMessageViewController.m in Sources */,
 				08C7EFE618D022DF00159471 /* LZPrescribeMedicineItemCell.m in Sources */,
 				08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */,
 				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
@@ -447,7 +488,6 @@
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
 				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,
-				08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */,
 				08C7EFE018D00A2300159471 /* LZCurrentDiseaseCell.m in Sources */,
 				08C7EFDD18D006D600159471 /* LZQueuePlaceCell.m in Sources */,
 				08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */,

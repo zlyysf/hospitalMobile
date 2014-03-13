@@ -55,7 +55,7 @@
     if (section == 0)
         return 8;
     else
-        return 6;
+        return 5;
 }
 
 /*
@@ -117,5 +117,32 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if (range.length==0) {
+        if ([text isEqualToString:@"\n"]) {
+            [textView resignFirstResponder];
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+- (IBAction)doSave:(UIBarButtonItem *)sender {
+    
+    if (sender.tintColor == [UIColor grayColor])
+        sender.tintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+    else
+        sender.tintColor = [UIColor grayColor];
+}
 
 @end
