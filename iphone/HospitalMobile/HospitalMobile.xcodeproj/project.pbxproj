@@ -35,7 +35,6 @@
 		08D97EB618CDACBF006D5F0C /* FeeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB518CDACBF006D5F0C /* FeeList.storyboard */; };
 		08D97EB818CDACE9006D5F0C /* SeeDoctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB718CDACE9006D5F0C /* SeeDoctor.storyboard */; };
 		08D97EBA18CDAD60006D5F0C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EB918CDAD60006D5F0C /* Message.storyboard */; };
-		08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */; };
 		08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */; };
 		08D97EC918CDB2FC006D5F0C /* tabbarIconDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08D97EC818CDB2FC006D5F0C /* tabbarIconDefault@2x.png */; };
 		08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D97ECC18CDB46F006D5F0C /* LZUtility.m */; };
@@ -101,8 +100,6 @@
 		08D97EB518CDACBF006D5F0C /* FeeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeeList.storyboard; sourceTree = "<group>"; };
 		08D97EB718CDACE9006D5F0C /* SeeDoctor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SeeDoctor.storyboard; sourceTree = "<group>"; };
 		08D97EB918CDAD60006D5F0C /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
-		08D97EBB18CDAE64006D5F0C /* LZInfoInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInfoInputViewController.h; sourceTree = "<group>"; };
-		08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInfoInputViewController.m; sourceTree = "<group>"; };
 		08D97EBE18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterAtHospitalViewController.h; sourceTree = "<group>"; };
 		08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterAtHospitalViewController.m; sourceTree = "<group>"; };
 		08D97EC818CDB2FC006D5F0C /* tabbarIconDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarIconDefault@2x.png"; sourceTree = "<group>"; };
@@ -259,8 +256,6 @@
 				08D97EAF18CDAB0D006D5F0C /* LZMainTabBarController.m */,
 				B9A2F70E18D1127E0019277B /* LZInfoInputTableViewController.h */,
 				B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */,
-				08D97EBB18CDAE64006D5F0C /* LZInfoInputViewController.h */,
-				08D97EBC18CDAE64006D5F0C /* LZInfoInputViewController.m */,
 				08D97EBE18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.h */,
 				08D97EBF18CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m */,
 				08D97ECE18CDBE2F006D5F0C /* LZFeeListViewController.h */,
@@ -445,7 +440,6 @@
 				08C7EFDD18D006D600159471 /* LZQueuePlaceCell.m in Sources */,
 				08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */,
 				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
-				08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */,
 				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
 				08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */,
