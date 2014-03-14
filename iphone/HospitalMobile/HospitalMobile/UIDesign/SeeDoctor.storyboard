@@ -222,6 +222,13 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JKs-Rb-hJc">
+                                            <rect key="frame" x="30" y="40" width="60" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -229,7 +236,7 @@
                                     <outlet property="buttonSeeResult" destination="9bQ-eg-y6S" id="ffv-ZZ-bNL"/>
                                     <outlet property="labelCheckItemName" destination="41D-mM-amU" id="q6Z-Oc-azf"/>
                                     <outlet property="labelResultEstimateTime" destination="R4E-Kv-ji7" id="qkZ-Bf-Wp8"/>
-                                    <outlet property="labelResultOutcomeState" destination="COA-aK-8HU" id="TX5-gz-73c"/>
+                                    <outlet property="labelResultOutcomeState" destination="JKs-Rb-hJc" id="Ma6-Nh-TEu"/>
                                     <outlet property="labelWaitQueueInfo" destination="uYV-nk-Hyi" id="Nr2-U5-YXh"/>
                                 </connections>
                             </tableViewCell>
