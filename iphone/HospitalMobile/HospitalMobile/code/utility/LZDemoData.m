@@ -54,7 +54,7 @@
     NSMutableDictionary *zhenhao1yaopin1,*zhenhao1yaopin2;
     NSMutableArray *zhenhao1yaopinAry;
     
-    NSMutableArray *allJiaofeiAry;
+    NSMutableArray *allJiaofeiAry,*allJianchaAry;
 
 //    NSMutableDictionary *zhenhaoSimple1,*zhenhaoSimple2;
 //    NSMutableArray *zhenhaoSimpleAry;
@@ -268,6 +268,7 @@
     zhenhao1jiancha2[@"details"] = jiancha2resultAry;
     
     zhenhao1jianchaAry = [NSMutableArray arrayWithObjects:zhenhao1jiancha1,zhenhao1jiancha2, nil];
+    allJianchaAry = [NSMutableArray arrayWithObjects:zhenhao1jiancha1,zhenhao1jiancha2, nil];
     
     zhenhao1yaopin1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"yaopin001",@"id", @"zhenhao001",@"id_zhenhao", @"药品名称1",@"name",[NSNumber numberWithInt:2],@"amount", @"盒",@"unit",
@@ -292,22 +293,22 @@
     
     zhenhao1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"jiaofei001",@"id", @"zhenhao001",@"id_zhenhao", @"zhenhao",@"type",
-                       [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid", dtNow,@"createTime",
                        nil];
     jiancha1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"jiaofei002",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha001",@"id_jiancha", @"jiancha",@"type",
-                       [NSNumber numberWithDouble:500.0],@"total", [NSNumber numberWithDouble:150.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       [NSNumber numberWithDouble:500.0],@"total", [NSNumber numberWithDouble:150.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid", dtNow,@"createTime",
                        nil];
     jiancha2jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"jiaofei003",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha002",@"id_jiancha", @"jiancha",@"type",
-                       [NSNumber numberWithDouble:600.0],@"total", [NSNumber numberWithDouble:180.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       [NSNumber numberWithDouble:600.0],@"total", [NSNumber numberWithDouble:180.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid", dtNow,@"createTime",
                        nil];
     zhenhao2jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"jiaofei011",@"id", @"zhenhao002",@"id_zhenhao", @"zhenhao",@"type",
-                       [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid", dtNow,@"createTime",
                        nil];
     
-
+    allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,jiancha2jiaofei,zhenhao2jiaofei, nil];
 
     
     NSDictionary *registration1 = @{@"department":@"产科", @"expertNum":@3, @"normalTickets":@10, @"expertTickets":@5,
@@ -321,7 +322,7 @@
     
     registrationArray = @[registration1, registration2, registration3, registration4];
 
-    allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,jiancha2jiaofei,zhenhao2jiaofei, nil];
+    
 
 
     
@@ -352,6 +353,32 @@
 {
     return zhenhaoAry;
 }
+-(NSArray *)get_jiaofeiAry
+{
+    return allJiaofeiAry;
+}
+-(NSDictionary *)get_zhenhaoById:(NSString*)zhenhaoId
+{
+    for (int i=0; i<zhenhaoAry.count; i++) {
+        NSDictionary *zhenhao = zhenhaoAry[i];
+        if ([zhenhaoId isEqualToString:zhenhao[@"id"]]){
+            return zhenhao;
+        }
+    }
+    return nil;
+}
+-(NSDictionary *)get_jianchaById:(NSString*)jianchaId
+{
+    for (int i=0; i<allJianchaAry.count; i++) {
+        NSDictionary *jiancha = allJianchaAry[i];
+        if ([jianchaId isEqualToString:jiancha[@"id"]]){
+            return jiancha;
+        }
+    }
+    return nil;
+}
+
+
 
 -(NSArray *)get_jianchaAryByZhenhao:(NSString*)zhenhaoId
 {

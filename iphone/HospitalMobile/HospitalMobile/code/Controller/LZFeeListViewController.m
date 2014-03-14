@@ -7,12 +7,16 @@
 //
 
 #import "LZFeeListViewController.h"
+#import "LZFeeCell.h"
+#import "LZDemoData.h"
 
 @interface LZFeeListViewController ()
 
 @end
 
-@implementation LZFeeListViewController
+@implementation LZFeeListViewController{
+    NSArray *feeAry;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    feeAry = [[LZDemoData singleton]get_jiaofeiAry];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,26 +50,46 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return feeAry.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    LZFeeCell *FeeCell = [tableView dequeueReusableCellWithIdentifier:@"LZFeeCell" forIndexPath:indexPath];
+    NSDictionary *feeInfo = feeAry[indexPath.row];
     
-    // Configure the cell...
+    NSString *feeType = feeInfo[@"type"];
+    if ([feeType isEqualToString:@"zhenhao"]){
+        NSString *zhenhaoId = feeInfo[@"id_zhenhao"];
+        NSDictionary *zhenhao = [[LZDemoData singleton] get_zhenhaoById:zhenhaoId];
+        FeeCell.labelName.text = [NSString stringWithFormat:@"%@ %@", zhenhao[@"department"],zhenhao[@"daifu"]];
+    }else{
+        NSString *jianchaId = feeInfo[@"id_jiancha"];
+        NSDictionary *jiancha = [[LZDemoData singleton] get_jianchaById:jianchaId];
+        FeeCell.labelName.text =  [NSString stringWithFormat:@"%@", jiancha[@"name"]];
+    }
+    FeeCell.labelTotal.text = [NSString stringWithFormat:@"总计:%@", feeInfo[@"total"]];
+    FeeCell.labelTotal.textAlignment = NSTextAlignmentRight;
+    FeeCell.labelOwnExpense.text = [NSString stringWithFormat:@"自费:%@", feeInfo[@"shouldPay"]];
+    FeeCell.labelOwnExpense.textAlignment = NSTextAlignmentRight;
     
-    return cell;
+    NSDateFormatter *dtfmt = [[NSDateFormatter alloc]init];
+    [dtfmt setDateFormat:@"yyyyMMdd HH:mm"];
+    FeeCell.labelTime.text = [dtfmt stringFromDate:feeInfo[@"createTime"]];
+    NSNumber *nmPaid = feeInfo[@"isPaid"];
+    FeeCell.buttonPay.hidden = ([nmPaid intValue]==1);
+    
+    return FeeCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
 }
 
 /*

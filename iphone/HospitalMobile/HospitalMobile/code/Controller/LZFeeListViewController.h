@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZFeeListViewController : UITableViewController
+@interface LZFeeListViewController : UITableViewController<UITableViewDelegate>
 
 @end
