@@ -33,6 +33,7 @@
      检查结果对应若干明细项（包括文字描述，文字条目列表，图片列表）
  
  检查结果明细项 以血生化为例 http://www.gamhospital.ac.cn/shenghuazzhi.asp
+         http://wenku.baidu.com/link?url=8Epmrt_76epJhe-tN4k-2PUwkF09Q5usklKTlDk0xmfLHIsSjttaD8QdqLgGHYkv-mVI8U0wB8z_3WsKf6FDDS7_ppt3MvGuJwQKp2QvwU_
      明细项名称，测得值，值的单位，正常参考值描述，异常程度（偏高、偏低、正常、严重偏高、严重偏低），范围参考值（可选），图片(对于某些需要图像结果的)，图片表现描述，图片意见（对应影像学表现，影响学意见）
  
  */
@@ -46,10 +47,10 @@
     
     NSMutableDictionary *zhenhao1,*zhenhao2;
     NSMutableArray *zhenhaoAry;
-    NSMutableDictionary *zhenhao1jiaofei, *jiancha1jiaofei,*zhenhao2jiaofei;
-    NSMutableDictionary *zhenhao1jiancha1;
-    NSMutableDictionary *jiancha1result1detail1;
-    NSMutableArray *jiancha1result1ary, *zhenhao1jianchaAry;
+    NSMutableDictionary *zhenhao1jiaofei, *jiancha1jiaofei, *jiancha2jiaofei, *zhenhao2jiaofei;
+    NSMutableDictionary *zhenhao1jiancha1,*zhenhao1jiancha2;
+    NSMutableDictionary *jiancha1resultDetail1,*jianchaResultDetail;
+    NSMutableArray *jiancha1resultAry,*jiancha2resultAry, *zhenhao1jianchaAry;
     NSMutableDictionary *zhenhao1yaopin1,*zhenhao1yaopin2;
     NSMutableArray *zhenhao1yaopinAry;
     
@@ -101,30 +102,172 @@
                 @"jiaofei001",@"id_jiaofei",
                 nil];
     
-    zhenhao1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"jiaofei001",@"id", @"zhenhao001",@"id_zhenhao", @"zhenhao",@"type",
-                       [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
-                       nil];
-    jiancha1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"jiaofei002",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha001",@"id_jiancha", @"jiancha",@"type",
-                       [NSNumber numberWithDouble:500.0],@"total", [NSNumber numberWithDouble:150.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
-                       nil];
-
     zhenhao1jiancha1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                         @"jiancha001",@"id",@"jiancha001",@"code", @"zhenhao001",@"id_zhenhao", @"CT：头颈部",@"name", @"jiaofei002",@"id_jiaofei",
                         [NSNumber numberWithInt:0],@"seq", dtNow,@"doneTime", @"MR",@"checkType", @"头颈部",@"checkPosition", @"",@"diseaseName",
                         dtNow,@"reportTime", @"医师王",@"reporter",@"医师王",@"auditor", @"已审核",@"checkState",
                         @"创伤脑血管神经外科",@"applyDepartment", @"",@"operator", @"头颅血管CTA",@"checkWay",
                         nil];
-    
-    jiancha1result1detail1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+    jiancha1resultDetail1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"jiancha001",@"id", [NSNumber numberWithInt:1],@"seq", @"pic1.png",@"imagePath",
                        @"颅骨环完整。双侧大脑半球对称，灰白质分界清，大脑实质内未见异常信号影。脑干及双侧小脑半球形态及信号未见异常。各脑室系统、闹池沟未见增宽、变形、移位。中线结构未见移位。双侧上颌窦、筛窦、额窦粘膜增厚，长T1、长T2信号影。",@"imageDescription",
                        @"颅脑MR平扫未见异常；副鼻窦炎",@"imageConclusion",
                        nil];
+    jiancha1resultAry = [NSMutableArray arrayWithObjects:jiancha1resultDetail1, nil];
+    zhenhao1jiancha1[@"details"] = jiancha1resultAry;
     
-    jiancha1result1ary = [NSMutableArray arrayWithObjects:jiancha1result1detail1, nil];
-    zhenhao1jianchaAry = [NSMutableArray arrayWithObjects:zhenhao1jiancha1, nil];
+    zhenhao1jiancha2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                        @"jiancha002",@"id",@"jiancha002",@"code", @"zhenhao001",@"id_zhenhao", @"血液生化",@"name", @"jiaofei003",@"id_jiaofei",
+                        [NSNumber numberWithInt:4],@"seq", dtNow,@"doneTime", @"",@"checkType", @"",@"checkPosition", @"",@"diseaseName",
+                        dtNow,@"reportTime", @"医师陈",@"reporter",@"医师陈",@"auditor", @"已审核",@"checkState",
+                        @"消化内科",@"applyDepartment", @"",@"operator", @"",@"checkWay",
+                        nil];
+    
+    jiancha2resultAry = [NSMutableArray array];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:1],@"seq", @"谷丙转氨酶",@"itemName",
+                           @"23",@"value", @"U/L",@"unit", @"0-40",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:1],@"seq", @"谷草转氨酶",@"itemName",
+                           @"26",@"value", @"U/L",@"unit", @"0-40",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:1],@"seq", @"总胆红素",@"itemName",
+                           @"11.6",@"value", @"umol/L",@"unit", @"0-20",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:2],@"seq", @"直接胆红素",@"itemName",
+                           @"2.6",@"value", @"umol/L",@"unit", @"0-6",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:3],@"seq", @"间接胆红素",@"itemName",
+                           @"9.0",@"value", @"umol/L",@"unit", @"0-18",@"refValue",
+                           nil];
+    
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"总蛋白",@"itemName",
+                           @"59.9",@"value", @"g/L",@"unit", @"60-81",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"白蛋白",@"itemName",
+                           @"43.1",@"value", @"g/L",@"unit", @"35-55",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"白球比",@"itemName",
+                           @"1.81",@"value", @"1-2.5",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"碱性磷酸酶",@"itemName",
+                           @"81.2",@"value", @"U/L",@"unit", @"20-115",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"谷氨酰转肽酶",@"itemName",
+                           @"17.6",@"value", @"U/L",@"unit", @"0-35",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"前白蛋白",@"itemName",
+                           @"223.0",@"value", @"mg/L",@"unit", @"150-380",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"总胆汁酸",@"itemName",
+                           @"3.8",@"value", @"umol/L",@"unit", @"<10",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"胆碱酯酶",@"itemName",
+                           @"8943.0",@"value", @"U/L",@"unit", @"3900-10800",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"乳酸脱氢酶",@"itemName",
+                           @"223.7",@"value", @"U/L",@"unit", @"110-240",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"肌酸激酶",@"itemName",
+                           @"133.7",@"value", @"U/L",@"unit", @"25-170",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"肌酸激酶同功酶",@"itemName",
+                           @"10.2",@"value", @"U/L",@"unit", @"0-24",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"羟丁酸脱氢酶",@"itemName",
+                           @"217.3",@"value", @"U/L",@"unit", @"75-200",@"refValue", @"偏高",@"abnormalLevel",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"腺苷脱氨酶",@"itemName",
+                           @"12.4",@"value", @"U/L",@"unit", @"4-20",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"α-淀粉酶",@"itemName",
+                           @"72.5",@"value", @"U/L",@"unit", @"20-100",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"α-L-岩藻糖苷酶",@"itemName",
+                           @"24.5",@"value", @"U/L",@"unit", @"0-40",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"载脂蛋白A１",@"itemName",
+                           @"1.77",@"value", @"g/L",@"unit", @"1-1.76",@"refValue", @"偏高",@"abnormalLevel",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"载脂蛋白B",@"itemName",
+                           @"0.96",@"value", @"g/L",@"unit", @"0.6-1.1",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"脂蛋白(a)",@"itemName",
+                           @"172.0",@"value", @"mg/L",@"unit", @"0-300",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"总胆固醇",@"itemName",
+                           @"6.06",@"value", @"mmol/L",@"unit", @"0.1-6",@"refValue", @"偏高",@"abnormalLevel",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"甘油三脂",@"itemName",
+                           @"0.82",@"value", @"mmol/L",@"unit", @"0.3-2",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"高密度脂蛋白胆固醇",@"itemName",
+                           @"1.92",@"value", @"mmol/L",@"unit", @"0.9-2",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"低密度脂蛋白胆固醇",@"itemName",
+                           @"4.01",@"value", @"mmol/L",@"unit", @"正常人群2.1-4",@"refValue", @"偏高",@"abnormalLevel",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+    jianchaResultDetail = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                           @"jiancha002",@"id", [NSNumber numberWithInt:4],@"seq", @"钾",@"itemName",
+                           @"3.93",@"value", @"mmol/L",@"unit", @"3.5-5.5",@"refValue",
+                           nil];
+    [jiancha2resultAry addObject:jianchaResultDetail];
+
+    zhenhao1jiancha2[@"details"] = jiancha2resultAry;
+    
+    zhenhao1jianchaAry = [NSMutableArray arrayWithObjects:zhenhao1jiancha1,zhenhao1jiancha2, nil];
     
     zhenhao1yaopin1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"yaopin001",@"id", @"zhenhao001",@"id_zhenhao", @"药品名称1",@"name",[NSNumber numberWithInt:2],@"amount", @"盒",@"unit",
@@ -142,14 +285,30 @@
                 @"肺炎症状明显",@"doctorDiseaseDescription", @"多喝水",@"doctorAdvice",
                 @"jiaofei002",@"id_jiaofei",
                 nil];
+    
+
+    zhenhaoAry = [NSMutableArray arrayWithObjects:zhenhao1,zhenhao2, nil];
+    
+    
+    zhenhao1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"jiaofei001",@"id", @"zhenhao001",@"id_zhenhao", @"zhenhao",@"type",
+                       [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       nil];
+    jiancha1jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"jiaofei002",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha001",@"id_jiancha", @"jiancha",@"type",
+                       [NSNumber numberWithDouble:500.0],@"total", [NSNumber numberWithDouble:150.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       nil];
+    jiancha2jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"jiaofei003",@"id", @"zhenhao001",@"id_zhenhao", @"jiancha002",@"id_jiancha", @"jiancha",@"type",
+                       [NSNumber numberWithDouble:600.0],@"total", [NSNumber numberWithDouble:180.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
+                       nil];
     zhenhao2jiaofei = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"jiaofei011",@"id", @"zhenhao002",@"id_zhenhao", @"zhenhao",@"type",
                        [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:0],@"isPaid",
                        nil];
-
-    zhenhaoAry = [NSMutableArray arrayWithObjects:zhenhao1,zhenhao2, nil];
     
-    allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,zhenhao2jiaofei, nil];
+
+
     
     NSDictionary *registration1 = @{@"department":@"产科", @"expertNum":@3, @"normalTickets":@10, @"expertTickets":@5,
                                     @"expertList":@[@{@"name":@"张大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@1}]};
@@ -161,6 +320,9 @@
                                     @"expertList":@[@{@"name":@"黄大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@2}, @{@"name":@"申大夫", @"number":@2}]};
     
     registrationArray = @[registration1, registration2, registration3, registration4];
+
+    allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,jiancha2jiaofei,zhenhao2jiaofei, nil];
+
 
     
 }

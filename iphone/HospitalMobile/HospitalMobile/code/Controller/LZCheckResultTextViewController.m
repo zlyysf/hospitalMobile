@@ -7,12 +7,19 @@
 //
 
 #import "LZCheckResultTextViewController.h"
+#import "LZXueYeShengHuaCell.h"
 
 @interface LZCheckResultTextViewController ()
 
 @end
 
-@implementation LZCheckResultTextViewController
+
+
+@implementation LZCheckResultTextViewController{
+    NSArray *checkResultDetails;
+}
+
+@synthesize checkResultDict;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    checkResultDetails = checkResultDict[@"details"];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,28 +53,39 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return checkResultDetails.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    LZXueYeShengHuaCell *XueYeShengHuaCell = [tableView dequeueReusableCellWithIdentifier:@"LZXueYeShengHuaCell" forIndexPath:indexPath];
+    NSDictionary *detailDict = checkResultDetails[indexPath.row];
+    XueYeShengHuaCell.labelName.text = detailDict[@"itemName"];
+    XueYeShengHuaCell.labelValue.text = detailDict[@"value"];
+    XueYeShengHuaCell.labelUnit.text = detailDict[@"unit"];
+    XueYeShengHuaCell.labelRefValue.text = detailDict[@"refValue"];
     
-    // Configure the cell...
+    NSString *abnormalLevel = detailDict[@"abnormalLevel"];
+    NSString *abnormalSign = @"";
+    if ([@"偏高" isEqualToString:abnormalLevel]){
+        abnormalSign = @"↑";
+    }else if([@"偏低" isEqualToString:abnormalLevel]){
+        abnormalSign = @"↓";
+    }
+    XueYeShengHuaCell.labelAbnormalLevel.text = abnormalSign;
     
-    return cell;
+    return XueYeShengHuaCell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

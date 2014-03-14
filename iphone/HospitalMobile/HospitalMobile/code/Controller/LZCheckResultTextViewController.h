@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZCheckResultTextViewController : UITableViewController
+@interface LZCheckResultTextViewController : UITableViewController<UITableViewDelegate>
+
+@property (strong,nonatomic)NSDictionary *checkResultDict;
 
 @end

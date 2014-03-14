@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081228B618D19A3400681F85 /* LZXueYeShengHuaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */; };
+		081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228B818D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m */; };
+		081228BC18D1B88800681F85 /* LZCTCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228BB18D1B88800681F85 /* LZCTCheckCell.m */; };
 		08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */; };
 		08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */; };
 		08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */; };
@@ -69,6 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		081228B418D19A3400681F85 /* LZXueYeShengHuaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXueYeShengHuaCell.h; sourceTree = "<group>"; };
+		081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXueYeShengHuaCell.m; sourceTree = "<group>"; };
+		081228B718D1A85700681F85 /* LZCheckRecordGeneralInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckRecordGeneralInfoCell.h; sourceTree = "<group>"; };
+		081228B818D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCheckRecordGeneralInfoCell.m; sourceTree = "<group>"; };
+		081228BA18D1B88800681F85 /* LZCTCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCTCheckCell.h; sourceTree = "<group>"; };
+		081228BB18D1B88800681F85 /* LZCTCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCTCheckCell.m; sourceTree = "<group>"; };
 		08C7EFD218CF26BB00159471 /* LZZhenHaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZhenHaoViewController.h; sourceTree = "<group>"; };
 		08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoViewController.m; sourceTree = "<group>"; };
 		08C7EFD518CF28AE00159471 /* LZCheckResultTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckResultTextViewController.h; sourceTree = "<group>"; };
@@ -357,6 +366,12 @@
 				08C7EFE818D024AE00159471 /* LZDoctorAdviceCell.m */,
 				FC9F002B18D1CCE2002B675E /* LZRegisterHospitalCell.h */,
 				FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */,
+				081228B418D19A3400681F85 /* LZXueYeShengHuaCell.h */,
+				081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */,
+				081228B718D1A85700681F85 /* LZCheckRecordGeneralInfoCell.h */,
+				081228B818D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m */,
+				081228BA18D1B88800681F85 /* LZCTCheckCell.h */,
+				081228BB18D1B88800681F85 /* LZCTCheckCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -488,14 +503,19 @@
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
 				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,
+				08D97ED618CDC059006D5F0C /* LZMessageViewController.m in Sources */,
+				081228B618D19A3400681F85 /* LZXueYeShengHuaCell.m in Sources */,
 				08C7EFE018D00A2300159471 /* LZCurrentDiseaseCell.m in Sources */,
 				08C7EFDD18D006D600159471 /* LZQueuePlaceCell.m in Sources */,
 				08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */,
 				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
+				081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */,
+				08D97EBD18CDAE64006D5F0C /* LZInfoInputViewController.m in Sources */,
 				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
 				08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */,
 				08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */,
+				081228BC18D1B88800681F85 /* LZCTCheckCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

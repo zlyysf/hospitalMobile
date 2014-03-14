@@ -78,13 +78,18 @@
     //    NSLog(@"cellbuttonSeeResultTouchUpInside sender=%@",sender);
     int rowPos = sender.tag - CellButtonTagOffsetToContainRowPosition;
     NSDictionary *checkDict = checkAry[rowPos];
-    
-    //todo judge to use LZCheckResultImageViewController or LZCheckResultTextViewController
-    
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
-    LZCheckResultTextViewController * CheckResultTextViewController = [sboard instantiateViewControllerWithIdentifier:@"LZCheckResultTextViewController"];
-    CheckResultTextViewController.title = @"检查结果";
-    [self.navigationController pushViewController:CheckResultTextViewController animated:YES];
+    if ([@"血液生化" isEqualToString:checkDict[@"name"]]){
+        LZCheckResultTextViewController * CheckResultTextViewController = [sboard instantiateViewControllerWithIdentifier:@"LZCheckResultTextViewController"];
+        CheckResultTextViewController.checkResultDict = checkDict;
+        CheckResultTextViewController.title = @"检查结果";
+        [self.navigationController pushViewController:CheckResultTextViewController animated:YES];
+    }if ([@"CT：头颈部" isEqualToString:checkDict[@"name"]]){
+        LZCheckResultImageViewController * CheckResultImageViewController = [sboard instantiateViewControllerWithIdentifier:@"LZCheckResultImageViewController"];
+        CheckResultImageViewController.checkResultDict = checkDict;
+        CheckResultImageViewController.title = @"检查结果";
+        [self.navigationController pushViewController:CheckResultImageViewController animated:YES];
+    }
 }
 
 #pragma mark - Table view data source
