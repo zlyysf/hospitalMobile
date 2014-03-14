@@ -13,6 +13,8 @@
 #import "LZSeeDoctorViewController.h"
 #import "LZMessageViewController.h"
 #import "LZUtility.h"
+#import "LZLoginViewController.h"
+#import "LZDemoData.h"
 
 @interface LZMainTabBarController ()
 
@@ -78,6 +80,21 @@
 //    {
 //        self.tabBar.translucent = NO;
 //    }
+
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (![[LZDemoData singleton]isLogined]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LZLoginViewController *LoginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LZLoginViewController"];
+        UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:LoginViewController];
+        
+        [self presentModalViewController:navController animated:YES];
+    }
+
+    
 
     
 }

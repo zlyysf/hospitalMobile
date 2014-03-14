@@ -11,6 +11,8 @@
 @interface LZDemoData : NSObject
 +(LZDemoData *)singleton;
 
+@property (nonatomic,assign) BOOL isLogined;
+
 -(NSMutableDictionary *)get_patientInfo;
 -(void)set_patientInfo:(NSDictionary*)patientInfo;
 

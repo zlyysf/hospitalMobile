@@ -61,6 +61,8 @@
     NSArray *registrationArray;
 }
 
+@synthesize isLogined;
+
 +(LZDemoData *)singleton {
     static dispatch_once_t pred;
     static LZDemoData *shared;

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08055DFD18D2D55E001C02C0 /* LZFeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08055DFC18D2D55E001C02C0 /* LZFeeCell.m */; };
+		08055E0018D319CF001C02C0 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08055DFF18D319CF001C02C0 /* LZLoginViewController.m */; };
+		08055E0418D31FC0001C02C0 /* LZSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */; };
 		081228B618D19A3400681F85 /* LZXueYeShengHuaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */; };
 		081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228B818D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m */; };
 		081228BC18D1B88800681F85 /* LZCTCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228BB18D1B88800681F85 /* LZCTCheckCell.m */; };
@@ -75,6 +77,10 @@
 /* Begin PBXFileReference section */
 		08055DFB18D2D55E001C02C0 /* LZFeeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFeeCell.h; sourceTree = "<group>"; };
 		08055DFC18D2D55E001C02C0 /* LZFeeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFeeCell.m; sourceTree = "<group>"; };
+		08055DFE18D319CF001C02C0 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginViewController.h; sourceTree = "<group>"; };
+		08055DFF18D319CF001C02C0 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
+		08055E0218D31FC0001C02C0 /* LZSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSignUpViewController.h; sourceTree = "<group>"; };
+		08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSignUpViewController.m; sourceTree = "<group>"; };
 		081228B418D19A3400681F85 /* LZXueYeShengHuaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXueYeShengHuaCell.h; sourceTree = "<group>"; };
 		081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXueYeShengHuaCell.m; sourceTree = "<group>"; };
 		081228B718D1A85700681F85 /* LZCheckRecordGeneralInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckRecordGeneralInfoCell.h; sourceTree = "<group>"; };
@@ -310,6 +316,10 @@
 				08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */,
 				FC13238F18D216D200BE900F /* LZRegisterTableViewController.h */,
 				FC13239018D216D200BE900F /* LZRegisterTableViewController.m */,
+				08055DFE18D319CF001C02C0 /* LZLoginViewController.h */,
+				08055DFF18D319CF001C02C0 /* LZLoginViewController.m */,
+				08055E0218D31FC0001C02C0 /* LZSignUpViewController.h */,
+				08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -516,7 +526,9 @@
 				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
 				081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */,
 				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
+				08055E0418D31FC0001C02C0 /* LZSignUpViewController.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
+				08055E0018D319CF001C02C0 /* LZLoginViewController.m in Sources */,
 				08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */,
 				08D97ED018CDBE2F006D5F0C /* LZFeeListViewController.m in Sources */,
 				081228BC18D1B88800681F85 /* LZCTCheckCell.m in Sources */,

@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"交费";
+    
     feeAry = [[LZDemoData singleton]get_jiaofeiAry];
 
     // Uncomment the following line to preserve selection between presentations.

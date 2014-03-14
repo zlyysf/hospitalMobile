@@ -33,6 +33,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"看病";
+    
     zhenhaoAry = [[LZDemoData singleton]get_zhenhaoAry];
 
     // Uncomment the following line to preserve selection between presentations.
