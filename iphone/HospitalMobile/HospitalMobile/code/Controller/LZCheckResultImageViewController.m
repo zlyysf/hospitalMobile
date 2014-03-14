@@ -10,6 +10,7 @@
 
 #import "LZCTCheckCell.h"
 #import "LZCheckRecordGeneralInfoCell.h"
+#import "LZCTAViewController.h"
 
 @interface LZCheckResultImageViewController ()
 
@@ -89,6 +90,7 @@
         return CheckRecordGeneralInfoCell;
     }else if (indexPath.section==1){
         LZCTCheckCell *CTCheckCell = [tableView dequeueReusableCellWithIdentifier:@"LZCTCheckCell" forIndexPath:indexPath];
+        [CTCheckCell.buttonSeeImage addTarget:self action:@selector(seeImage:) forControlEvents:UIControlEventTouchUpInside];
         CTCheckCell.textviewImageDescription.text = detailDict[@"imageDescription"];
         CTCheckCell.textviewImageConclusion.text = detailDict[@"imageConclusion"];
         return CTCheckCell;
@@ -105,6 +107,17 @@
     }
     return 0;
 }
+
+#pragma mark- cell button event handler
+- (void)seeImage:(UIButton *)button
+{
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
+    LZCTAViewController *imageController = [board instantiateViewControllerWithIdentifier:@"CTAImageViewController"];
+    imageController.CTAImageView.image = [UIImage imageNamed:@"cta.png"];
+    //[self.navigationController presentViewController:imageController animated:YES completion:nil];
+    [self.navigationController pushViewController:imageController animated:YES];
+}
+
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

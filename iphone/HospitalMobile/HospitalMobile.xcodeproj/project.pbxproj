@@ -73,6 +73,8 @@
 		FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */; };
 		FCB8D17518D3227600B9798F /* LZPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8D17418D3227600B9798F /* LZPayViewController.m */; };
 		FCB8D17718D32B4900B9798F /* hangkong_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8D17618D32B4900B9798F /* hangkong_logo.png */; };
+		FCB8D17A18D3312B00B9798F /* LZCTAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8D17918D3312B00B9798F /* LZCTAViewController.m */; };
+		FCB8D17C18D336CF00B9798F /* cta.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8D17B18D336CF00B9798F /* cta.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +186,9 @@
 		FCB8D17318D3227600B9798F /* LZPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPayViewController.h; sourceTree = "<group>"; };
 		FCB8D17418D3227600B9798F /* LZPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPayViewController.m; sourceTree = "<group>"; };
 		FCB8D17618D32B4900B9798F /* hangkong_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hangkong_logo.png; sourceTree = "<group>"; };
+		FCB8D17818D3312B00B9798F /* LZCTAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCTAViewController.h; sourceTree = "<group>"; };
+		FCB8D17918D3312B00B9798F /* LZCTAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCTAViewController.m; sourceTree = "<group>"; };
+		FCB8D17B18D336CF00B9798F /* cta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cta.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +366,8 @@
 				08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */,
 				FCB8D17318D3227600B9798F /* LZPayViewController.h */,
 				FCB8D17418D3227600B9798F /* LZPayViewController.m */,
+				FCB8D17818D3312B00B9798F /* LZCTAViewController.h */,
+				FCB8D17918D3312B00B9798F /* LZCTAViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,6 +384,7 @@
 		08D97EC718CDB2FC006D5F0C /* image */ = {
 			isa = PBXGroup;
 			children = (
+				FCB8D17B18D336CF00B9798F /* cta.png */,
 				FCB8D17618D32B4900B9798F /* hangkong_logo.png */,
 				B920B9D318D26E8100524445 /* plus.png */,
 				B920B9D118D26E1200524445 /* happy.png */,
@@ -516,6 +524,7 @@
 				08055E1018D32AAA001C02C0 /* icon57.png in Resources */,
 				B920B9CA18D2578600524445 /* doctor_a.png in Resources */,
 				08D97EB618CDACBF006D5F0C /* FeeList.storyboard in Resources */,
+				FCB8D17C18D336CF00B9798F /* cta.png in Resources */,
 				B920B9C918D2578600524445 /* doctor_pan.png in Resources */,
 				08D97EB818CDACE9006D5F0C /* SeeDoctor.storyboard in Resources */,
 				08D97EC918CDB2FC006D5F0C /* tabbarIconDefault@2x.png in Resources */,
@@ -580,6 +589,7 @@
 				081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */,
 				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
 				08055E0418D31FC0001C02C0 /* LZSignUpViewController.m in Sources */,
+				FCB8D17A18D3312B00B9798F /* LZCTAViewController.m in Sources */,
 				FCB8D17518D3227600B9798F /* LZPayViewController.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
 				08055E0018D319CF001C02C0 /* LZLoginViewController.m in Sources */,
