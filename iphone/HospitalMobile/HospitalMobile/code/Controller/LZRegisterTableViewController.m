@@ -7,8 +7,9 @@
 //
 
 #import "LZRegisterTableViewController.h"
+#import "LZPayViewController.h"
 
-@interface LZRegisterTableViewController ()
+@interface LZRegisterTableViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -82,7 +83,7 @@
         fee = @"5";
     }
     
-    NSString *alertMessage = [NSString stringWithFormat:@"您已选择了%@，费用为%@，请点击确认缴费", registration, fee];
+    NSString *alertMessage = [NSString stringWithFormat:@"您已选择了%@，费用为%@元，请点击确认缴费", registration, fee];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                     message:alertMessage
@@ -116,6 +117,17 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	return 44.f;
+}
+
+#pragma UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
+        LZPayViewController *payController = [board instantiateViewControllerWithIdentifier:@"PayViewController"];
+        //[self.navigationController pushViewController:payController animated:YES];
+        [self.navigationController presentViewController:payController animated:YES completion:nil];
+    }
 }
 
 @end

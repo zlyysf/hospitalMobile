@@ -71,6 +71,8 @@
 		B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */; };
 		FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13239018D216D200BE900F /* LZRegisterTableViewController.m */; };
 		FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */; };
+		FCB8D17518D3227600B9798F /* LZPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8D17418D3227600B9798F /* LZPayViewController.m */; };
+		FCB8D17718D32B4900B9798F /* hangkong_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8D17618D32B4900B9798F /* hangkong_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +181,9 @@
 		FC13239018D216D200BE900F /* LZRegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterTableViewController.m; sourceTree = "<group>"; };
 		FC9F002B18D1CCE2002B675E /* LZRegisterHospitalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterHospitalCell.h; sourceTree = "<group>"; };
 		FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterHospitalCell.m; sourceTree = "<group>"; };
+		FCB8D17318D3227600B9798F /* LZPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPayViewController.h; sourceTree = "<group>"; };
+		FCB8D17418D3227600B9798F /* LZPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPayViewController.m; sourceTree = "<group>"; };
+		FCB8D17618D32B4900B9798F /* hangkong_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hangkong_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +359,8 @@
 				08055DFF18D319CF001C02C0 /* LZLoginViewController.m */,
 				08055E0218D31FC0001C02C0 /* LZSignUpViewController.h */,
 				08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */,
+				FCB8D17318D3227600B9798F /* LZPayViewController.h */,
+				FCB8D17418D3227600B9798F /* LZPayViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +377,7 @@
 		08D97EC718CDB2FC006D5F0C /* image */ = {
 			isa = PBXGroup;
 			children = (
+				FCB8D17618D32B4900B9798F /* hangkong_logo.png */,
 				B920B9D318D26E8100524445 /* plus.png */,
 				B920B9D118D26E1200524445 /* happy.png */,
 				B920B9CF18D26D4F00524445 /* horn.png */,
@@ -528,6 +536,7 @@
 				08055E1318D32AAA001C02C0 /* icon76.png in Resources */,
 				B920B9BF18D251C000524445 /* infoinput@2x.png in Resources */,
 				B920B9C518D2540800524445 /* cash@2x.png in Resources */,
+				FCB8D17718D32B4900B9798F /* hangkong_logo.png in Resources */,
 				B920B9D018D26D4F00524445 /* horn.png in Resources */,
 				B920B9C118D2524300524445 /* exam@2x.png in Resources */,
 			);
@@ -571,6 +580,7 @@
 				081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */,
 				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
 				08055E0418D31FC0001C02C0 /* LZSignUpViewController.m in Sources */,
+				FCB8D17518D3227600B9798F /* LZPayViewController.m in Sources */,
 				08D97EC018CDAF84006D5F0C /* LZRegisterAtHospitalViewController.m in Sources */,
 				08055E0018D319CF001C02C0 /* LZLoginViewController.m in Sources */,
 				08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */,

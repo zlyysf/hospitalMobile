@@ -68,8 +68,10 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell1" forIndexPath:indexPath];
     else if ([indexPath row] == 1)
         cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell2" forIndexPath:indexPath];
-    else
+    else if ([indexPath row] == 2)
         cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell3" forIndexPath:indexPath];
+    else
+        cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell4" forIndexPath:indexPath];
     
     return cell;
 }
