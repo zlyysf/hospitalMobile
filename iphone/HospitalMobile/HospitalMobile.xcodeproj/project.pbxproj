@@ -10,6 +10,15 @@
 		08055DFD18D2D55E001C02C0 /* LZFeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08055DFC18D2D55E001C02C0 /* LZFeeCell.m */; };
 		08055E0018D319CF001C02C0 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08055DFF18D319CF001C02C0 /* LZLoginViewController.m */; };
 		08055E0418D31FC0001C02C0 /* LZSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */; };
+		08055E0F18D32AAA001C02C0 /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0618D32AAA001C02C0 /* icon29.png */; };
+		08055E1018D32AAA001C02C0 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0718D32AAA001C02C0 /* icon57.png */; };
+		08055E1118D32AAA001C02C0 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0818D32AAA001C02C0 /* icon58.png */; };
+		08055E1218D32AAA001C02C0 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0918D32AAA001C02C0 /* icon72.png */; };
+		08055E1318D32AAA001C02C0 /* icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0A18D32AAA001C02C0 /* icon76.png */; };
+		08055E1418D32AAA001C02C0 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0B18D32AAA001C02C0 /* icon114.png */; };
+		08055E1518D32AAA001C02C0 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0C18D32AAA001C02C0 /* icon120.png */; };
+		08055E1618D32AAA001C02C0 /* icon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0D18D32AAA001C02C0 /* icon144.png */; };
+		08055E1718D32AAA001C02C0 /* icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 08055E0E18D32AAA001C02C0 /* icon152.png */; };
 		081228B618D19A3400681F85 /* LZXueYeShengHuaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */; };
 		081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228B818D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m */; };
 		081228BC18D1B88800681F85 /* LZCTCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228BB18D1B88800681F85 /* LZCTCheckCell.m */; };
@@ -81,6 +90,15 @@
 		08055DFF18D319CF001C02C0 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
 		08055E0218D31FC0001C02C0 /* LZSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSignUpViewController.h; sourceTree = "<group>"; };
 		08055E0318D31FC0001C02C0 /* LZSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSignUpViewController.m; sourceTree = "<group>"; };
+		08055E0618D32AAA001C02C0 /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon29.png; path = ../../../../icons/icon29.png; sourceTree = "<group>"; };
+		08055E0718D32AAA001C02C0 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57.png; path = ../../../../icons/icon57.png; sourceTree = "<group>"; };
+		08055E0818D32AAA001C02C0 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon58.png; path = ../../../../icons/icon58.png; sourceTree = "<group>"; };
+		08055E0918D32AAA001C02C0 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon72.png; path = ../../../../icons/icon72.png; sourceTree = "<group>"; };
+		08055E0A18D32AAA001C02C0 /* icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon76.png; path = ../../../../icons/icon76.png; sourceTree = "<group>"; };
+		08055E0B18D32AAA001C02C0 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114.png; path = ../../../../icons/icon114.png; sourceTree = "<group>"; };
+		08055E0C18D32AAA001C02C0 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon120.png; path = ../../../../icons/icon120.png; sourceTree = "<group>"; };
+		08055E0D18D32AAA001C02C0 /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon144.png; path = ../../../../icons/icon144.png; sourceTree = "<group>"; };
+		08055E0E18D32AAA001C02C0 /* icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon152.png; path = ../../../../icons/icon152.png; sourceTree = "<group>"; };
 		081228B418D19A3400681F85 /* LZXueYeShengHuaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXueYeShengHuaCell.h; sourceTree = "<group>"; };
 		081228B518D19A3400681F85 /* LZXueYeShengHuaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXueYeShengHuaCell.m; sourceTree = "<group>"; };
 		081228B718D1A85700681F85 /* LZCheckRecordGeneralInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckRecordGeneralInfoCell.h; sourceTree = "<group>"; };
@@ -106,7 +124,7 @@
 		08C7EFEE18D064EA00159471 /* LZKeyboardToolBarToHideKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZKeyboardToolBarToHideKB.h; sourceTree = "<group>"; };
 		08C7EFEF18D064EA00159471 /* LZKeyboardToolBarToHideKB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZKeyboardToolBarToHideKB.m; sourceTree = "<group>"; };
 		08C7EFF218D07C7300159471 /* LZConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConstant.h; sourceTree = "<group>"; };
-		08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08D97E7318CDA1EE006D5F0C /* 医院手机版.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "医院手机版.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D97E7618CDA1EE006D5F0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		08D97E7A18CDA1EE006D5F0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -187,6 +205,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08055E0518D32A80001C02C0 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				08055E0618D32AAA001C02C0 /* icon29.png */,
+				08055E0718D32AAA001C02C0 /* icon57.png */,
+				08055E0818D32AAA001C02C0 /* icon58.png */,
+				08055E0918D32AAA001C02C0 /* icon72.png */,
+				08055E0A18D32AAA001C02C0 /* icon76.png */,
+				08055E0B18D32AAA001C02C0 /* icon114.png */,
+				08055E0C18D32AAA001C02C0 /* icon120.png */,
+				08055E0D18D32AAA001C02C0 /* icon144.png */,
+				08055E0E18D32AAA001C02C0 /* icon152.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		08C7EFEA18D059D400159471 /* libUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +243,7 @@
 		08D97E7418CDA1EE006D5F0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */,
+				08D97E7318CDA1EE006D5F0C /* 医院手机版.app */,
 				08D97E8E18CDA1EE006D5F0C /* HospitalMobileTests.xctest */,
 			);
 			name = Products;
@@ -327,6 +361,7 @@
 		08D97EC618CDB2FC006D5F0C /* res */ = {
 			isa = PBXGroup;
 			children = (
+				08055E0518D32A80001C02C0 /* icons */,
 				08D97EC718CDB2FC006D5F0C /* image */,
 			);
 			path = res;
@@ -408,7 +443,7 @@
 			);
 			name = HospitalMobile;
 			productName = HospitalMobile;
-			productReference = 08D97E7318CDA1EE006D5F0C /* HospitalMobile.app */;
+			productReference = 08D97E7318CDA1EE006D5F0C /* 医院手机版.app */;
 			productType = "com.apple.product-type.application";
 		};
 		08D97E8D18CDA1EE006D5F0C /* HospitalMobileTests */ = {
@@ -467,21 +502,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08055E1518D32AAA001C02C0 /* icon120.png in Resources */,
+				08055E1218D32AAA001C02C0 /* icon72.png in Resources */,
 				08D97EB418CDAC5B006D5F0C /* RegisterAtHospital.storyboard in Resources */,
+				08055E1018D32AAA001C02C0 /* icon57.png in Resources */,
 				B920B9CA18D2578600524445 /* doctor_a.png in Resources */,
 				08D97EB618CDACBF006D5F0C /* FeeList.storyboard in Resources */,
 				B920B9C918D2578600524445 /* doctor_pan.png in Resources */,
 				08D97EB818CDACE9006D5F0C /* SeeDoctor.storyboard in Resources */,
 				08D97EC918CDB2FC006D5F0C /* tabbarIconDefault@2x.png in Resources */,
 				B920B9C318D252A400524445 /* message@2x.png in Resources */,
+				08055E1418D32AAA001C02C0 /* icon114.png in Resources */,
+				08055E1618D32AAA001C02C0 /* icon144.png in Resources */,
 				08D97EAB18CDAA36006D5F0C /* Main.storyboard in Resources */,
+				08055E1118D32AAA001C02C0 /* icon58.png in Resources */,
 				B920B9D218D26E1200524445 /* happy.png in Resources */,
+				08055E0F18D32AAA001C02C0 /* icon29.png in Resources */,
 				08D97E8118CDA1EE006D5F0C /* InfoPlist.strings in Resources */,
 				08D97E8918CDA1EE006D5F0C /* Images.xcassets in Resources */,
 				08D97EBA18CDAD60006D5F0C /* Message.storyboard in Resources */,
+				08055E1718D32AAA001C02C0 /* icon152.png in Resources */,
 				B920B9D418D26E8100524445 /* plus.png in Resources */,
 				B920B9CB18D2578600524445 /* doctor_b.png in Resources */,
 				08D97EB218CDAC1B006D5F0C /* InfoInput.storyboard in Resources */,
+				08055E1318D32AAA001C02C0 /* icon76.png in Resources */,
 				B920B9BF18D251C000524445 /* infoinput@2x.png in Resources */,
 				B920B9C518D2540800524445 /* cash@2x.png in Resources */,
 				B920B9D018D26D4F00524445 /* horn.png in Resources */,
@@ -648,12 +692,11 @@
 		08D97EA018CDA1EE006D5F0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
 				INFOPLIST_FILE = "HospitalMobile/HospitalMobile-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "医院手机版";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -661,12 +704,11 @@
 		08D97EA118CDA1EE006D5F0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
 				INFOPLIST_FILE = "HospitalMobile/HospitalMobile-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "医院手机版";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
