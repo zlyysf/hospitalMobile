@@ -211,42 +211,58 @@
     return 65;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    UIView *sectionView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
+////    [sectionView setBackgroundColor:[UIColor whiteColor]];
+//    
+//    UILabel *sectionTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 310, 30)];
+////    [sectionTitleLabel setTextColor:[UIColor whiteColor]];
+//    [sectionTitleLabel setFont:[UIFont boldSystemFontOfSize:16]];
+////    [sectionTitleLabel setBackgroundColor:[UIColor clearColor]];
+//    [sectionView addSubview:sectionTitleLabel];
+//    
+//    NSString *sectionTitle;
+//    if (section==4){
+//        sectionTitle = @"开药清单";
+//    }else if (section==2){
+//        sectionTitle = @"检查项目";
+//    }else{
+//        return nil;
+//    }
+//    
+//    sectionTitleLabel.text = sectionTitle;
+//    
+//    return sectionView;
+//}
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    if (section==4){
+//        return 30;
+//    }else if (section==2){
+//        return 30;
+//    }else{
+//        return 0;
+//    }
+//}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    UIView *sectionView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 30)];
-//    [sectionView setBackgroundColor:[UIColor whiteColor]];
-    
-    UILabel *sectionTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 310, 30)];
-//    [sectionTitleLabel setTextColor:[UIColor whiteColor]];
-    [sectionTitleLabel setFont:[UIFont boldSystemFontOfSize:16]];
-//    [sectionTitleLabel setBackgroundColor:[UIColor clearColor]];
-    [sectionView addSubview:sectionTitleLabel];
-    
-    NSString *sectionTitle;
-    if (section==4){
-        sectionTitle = @"开药清单";
+	NSString *sectionTitle = nil;
+    if (section==0){
+        sectionTitle = @"排队情况";
+    }else if (section==1){
+        sectionTitle = @"病人填写";
     }else if (section==2){
         sectionTitle = @"检查项目";
+    }else if (section==3){
+        sectionTitle = @"医生诊断";
+    }else if (section==4){
+        sectionTitle = @"开药清单";
     }else{
         return nil;
     }
-    
-    sectionTitleLabel.text = sectionTitle;
-    
-    return sectionView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section==4){
-        return 30;
-    }else if (section==2){
-        return 30;
-    }else{
-        return 0;
-    }
-    
-    
+    return sectionTitle;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
