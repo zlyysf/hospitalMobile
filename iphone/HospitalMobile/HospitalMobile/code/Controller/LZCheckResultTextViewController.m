@@ -72,12 +72,24 @@
     
     NSString *abnormalLevel = detailDict[@"abnormalLevel"];
     NSString *abnormalSign = @"";
+    bool isNormal = true;
     if ([@"偏高" isEqualToString:abnormalLevel]){
         abnormalSign = @"↑";
+        isNormal = false;
     }else if([@"偏低" isEqualToString:abnormalLevel]){
         abnormalSign = @"↓";
+        isNormal = false;
     }
     XueYeShengHuaCell.labelAbnormalLevel.text = abnormalSign;
+    if (isNormal){
+        XueYeShengHuaCell.labelName.textColor = [UIColor blackColor];
+        XueYeShengHuaCell.labelValue.textColor = [UIColor blackColor];
+        XueYeShengHuaCell.labelUnit.textColor = [UIColor blackColor];
+    }else{
+        XueYeShengHuaCell.labelName.textColor = [UIColor blueColor];
+        XueYeShengHuaCell.labelValue.textColor = [UIColor blueColor];
+        XueYeShengHuaCell.labelUnit.textColor = [UIColor blueColor];
+    }
     
     return XueYeShengHuaCell;
 }
