@@ -12,4 +12,8 @@
 
 @property (nonatomic, strong) NSDictionary *registrationInfo;
 
+
+- (IBAction)buttonDoctorInfoInCellTouchUpInside:(id)sender;
+
+
 @end

@@ -60,10 +60,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LZRegisterTableViewController *registerViewController = [[LZRegisterTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    registerViewController.registrationInfo = self.mockRegistrationList[indexPath.row];
-    [self.navigationController pushViewController:registerViewController animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+//    LZRegisterTableViewController *registerViewController = [[LZRegisterTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+//    registerViewController.registrationInfo = self.mockRegistrationList[indexPath.row];
+//    [self.navigationController pushViewController:registerViewController animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
+    LZRegisterTableViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZRegisterTableViewController"];
+    subController.registrationInfo = self.mockRegistrationList[indexPath.row];
+    [self.navigationController pushViewController:subController animated:YES];
 }
 
 @end

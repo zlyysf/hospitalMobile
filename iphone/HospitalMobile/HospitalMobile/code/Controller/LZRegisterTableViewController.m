@@ -8,6 +8,8 @@
 
 #import "LZRegisterTableViewController.h"
 #import "LZPayViewController.h"
+#import "LZDoctorSupplyRegistCountCell.h"
+#import "LZDoctorInfoViewController.h"
 
 @interface LZRegisterTableViewController () <UIAlertViewDelegate>
 
@@ -97,21 +99,40 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"RegistrationCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PrivacyTableViewCellIdentifier"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
-    }
-	if (indexPath.section == 0) {
-		cell.textLabel.text = self.registrationInfo[@"expertList"][indexPath.row][@"name"];
-        cell.detailTextLabel.text = [self.registrationInfo[@"expertList"][indexPath.row][@"number"] stringValue];
-	}
-    else if (indexPath.section == 1) {
-        cell.textLabel.text = nil;
-        cell.detailTextLabel.text = [self.registrationInfo[@"normalTickets"] stringValue];
-    }
+//    static NSString *cellIdentifier = @"RegistrationCell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PrivacyTableViewCellIdentifier"];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+//    }
+//	if (indexPath.section == 0) {
+//		cell.textLabel.text = self.registrationInfo[@"expertList"][indexPath.row][@"name"];
+//        cell.detailTextLabel.text = [self.registrationInfo[@"expertList"][indexPath.row][@"number"] stringValue];
+//	}
+//    else if (indexPath.section == 1) {
+//        cell.textLabel.text = nil;
+//        cell.detailTextLabel.text = [self.registrationInfo[@"normalTickets"] stringValue];
+//    }
+//    
+//    return cell;
     
-    return cell;
+
+    LZDoctorSupplyRegistCountCell *DoctorSupplyRegistCountCell = [tableView dequeueReusableCellWithIdentifier:@"LZDoctorSupplyRegistCountCell" forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        DoctorSupplyRegistCountCell.btnDoctor.hidden = false;
+        [DoctorSupplyRegistCountCell.btnDoctor setTitle:self.registrationInfo[@"expertList"][indexPath.row][@"name"] forState:UIControlStateNormal];
+//        DoctorSupplyRegistCountCell.btnDoctor.titleLabel.text = self.registrationInfo[@"expertList"][indexPath.row][@"name"];
+        DoctorSupplyRegistCountCell.btnDoctor.tag = indexPath.row;
+        DoctorSupplyRegistCountCell.labelCount.text = [self.registrationInfo[@"expertList"][indexPath.row][@"number"] stringValue];
+    }else if (indexPath.section == 1){
+        DoctorSupplyRegistCountCell.btnDoctor.hidden = true;
+        [DoctorSupplyRegistCountCell.btnDoctor setTitle:@"" forState:UIControlStateNormal];
+//        DoctorSupplyRegistCountCell.btnDoctor.titleLabel.text = @"";
+        DoctorSupplyRegistCountCell.btnDoctor.tag = indexPath.row;
+        DoctorSupplyRegistCountCell.labelCount.text = [self.registrationInfo[@"normalTickets"] stringValue];
+    }else{
+        return nil;
+    }
+    return DoctorSupplyRegistCountCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -130,4 +151,25 @@
     }
 }
 
+- (IBAction)buttonDoctorInfoInCellTouchUpInside:(id)sender {
+    UIButton *btn = sender;
+    int rowPos = btn.tag;
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
+    LZDoctorInfoViewController *subController = [board instantiateViewControllerWithIdentifier:@"LZDoctorInfoViewController"];
+    [self.navigationController pushViewController:subController animated:YES];
+}
+
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lbN-Pi-ICe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lbN-Pi-ICe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Register At Hospital View Controller-->
@@ -74,35 +74,43 @@
         <!--Register Table View Controller-->
         <scene sceneID="gt2-RZ-EBU">
             <objects>
-                <tableViewController id="q9P-mA-75j" customClass="LZRegisterTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LZRegisterTableViewController" id="q9P-mA-75j" customClass="LZRegisterTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="FXl-nl-c1G">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="qNF-DK-Wdr" detailTextLabel="jXJ-My-bRJ" style="IBUITableViewCellStyleValue1" id="tSL-tn-t2K">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LZDoctorSupplyRegistCountCell" id="4pK-cd-dvs" customClass="LZDoctorSupplyRegistCountCell">
                                 <rect key="frame" x="0.0" y="55" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSL-tn-t2K" id="Zdk-dq-67g">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4pK-cd-dvs" id="n0z-Pd-dUQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qNF-DK-Wdr">
-                                            <rect key="frame" x="15" y="11" width="33" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-Ro-U7M">
+                                            <rect key="frame" x="10" y="7" width="100" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="buttonDoctorInfoInCellTouchUpInside:" destination="q9P-mA-75j" eventType="touchUpInside" id="uKp-zo-aAd"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cnt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p4-oO-eGm">
+                                            <rect key="frame" x="260" y="7" width="50" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jXJ-My-bRJ">
-                                            <rect key="frame" x="261" y="11" width="44" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="btnDoctor" destination="tFk-Ro-U7M" id="LyN-kX-JbZ"/>
+                                    <outlet property="labelCount" destination="3p4-oO-eGm" id="GeN-pB-SZg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -154,7 +162,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hT-0H-voV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="-10"/>
+            <point key="canvasLocation" x="995" y="-400"/>
+        </scene>
+        <!--Doctor Info View Controller-->
+        <scene sceneID="frl-96-0FC">
+            <objects>
+                <viewController storyboardIdentifier="LZDoctorInfoViewController" id="pjW-qM-uG1" customClass="LZDoctorInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N3N-D0-Guv"/>
+                        <viewControllerLayoutGuide type="bottom" id="jus-gh-Tuf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pRN-sq-rB5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-tW-bHX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">韩信   副主任医师
+
+中青年神经外科专家，清华大学医学博士，功能与微创神经外科副主任。从事神经外科临床工作近二十年，经验丰富，技术精湛。共参与或独立完成颅脑手术约3000余台。2011年做为访问学者到日本北海道大学医院学习。
+
+中国烟雾病治疗网：www.yanwubing.com
+
+个人网站：hanhongy.haodf.com
+
+学习经历：
+
+1987年-1992年
+    安徽医科大学 本科 
+
+2001年-2004年
+    首都医科大学北京天坛医院  研究生 
+
+2006年-2010年
+    清华大学 博士研究生
+
+2011年
+    日本北海道大学  访问学者
+
+工作经历：
+
+2005年12月-2012年2月
+    清华大学玉泉医院神经外科副主任医师 
+
+2012年2月-至今
+    航空总医院功能与微创神经外科　
+    
+擅长手术治疗药物难治性癫痫，微创手术切除颅内肿瘤、椎管内肿瘤、脑血管畸形，联合血管搭桥手术治疗烟雾病，显微血管减压术治疗面肌痉挛、三叉神经痛，脑积水的手术治疗等
+
+所获荣誉和社会兼职
+中华中青年神经外科交流协会委员，中华医学会北京分会神经外科专业委员会青年委员。多次参加国际性学术会议，发表学术论文近30篇，其中SCI（科学引文索引）收录期刊4篇。
+
+出诊信息
+星期一上午（专家门诊）</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvDescription" destination="Mcg-tW-bHX" id="uQX-Qd-odL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLM-LQ-ddl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995" y="336"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
