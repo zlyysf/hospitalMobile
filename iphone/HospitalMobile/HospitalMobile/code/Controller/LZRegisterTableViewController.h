@@ -11,9 +11,11 @@
 @interface LZRegisterTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *registrationInfo;
+//@property (nonatomic, strong) NSString *department;
 
 
 - (IBAction)buttonDoctorInfoInCellTouchUpInside:(id)sender;
 
+- (IBAction)buttonRegisterInCellTouchUpInside:(id)sender;
 
 @end

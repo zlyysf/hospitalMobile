@@ -58,7 +58,7 @@
 
 //    NSMutableDictionary *zhenhaoSimple1,*zhenhaoSimple2;
 //    NSMutableArray *zhenhaoSimpleAry;
-    NSArray *registrationArray;
+    NSArray *registrationArray,*appointmentRegistrationArray;
 }
 
 @synthesize isLogined;
@@ -314,16 +314,19 @@
 
     
     NSDictionary *registration1 = @{@"department":@"产科", @"expertNum":@3, @"normalTickets":@10, @"expertTickets":@5,
-                                    @"expertList":@[@{@"name":@"张大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@1}]};
+                                    @"expertList":@[@{@"daifu":@"张大夫", @"number":@2}, @{@"daifu":@"李大夫", @"number":@2}, @{@"daifu":@"王大夫", @"number":@1}]};
     NSDictionary *registration2 = @{@"department":@"脑外科", @"expertNum":@3, @"normalTickets":@8, @"expertTickets":@6,
-                                    @"expertList":@[@{@"name":@"潘大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@2}]};
+                                    @"expertList":@[@{@"daifu":@"潘大夫", @"number":@2}, @{@"daifu":@"李大夫", @"number":@2}, @{@"daifu":@"王大夫", @"number":@2}]};
     NSDictionary *registration3 = @{@"department":@"呼吸内科", @"expertNum":@4, @"normalTickets":@12, @"expertTickets":@7,
-                                    @"expertList":@[@{@"name":@"黄大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@1}, @{@"name":@"申大夫", @"number":@2}]};
+                                    @"expertList":@[@{@"daifu":@"黄大夫", @"number":@2}, @{@"daifu":@"李大夫", @"number":@2}, @{@"daifu":@"王大夫", @"number":@1}, @{@"daifu":@"申大夫", @"number":@2}]};
     NSDictionary *registration4 = @{@"department":@"普外科", @"expertNum":@4, @"normalTickets":@11, @"expertTickets":@8,
-                                    @"expertList":@[@{@"name":@"黄大夫", @"number":@2}, @{@"name":@"李大夫", @"number":@2}, @{@"name":@"王大夫", @"number":@2}, @{@"name":@"申大夫", @"number":@2}]};
+                                    @"expertList":@[@{@"daifu":@"黄大夫", @"number":@2}, @{@"daifu":@"李大夫", @"number":@2}, @{@"daifu":@"王大夫", @"number":@2}, @{@"daifu":@"申大夫", @"number":@2}]};
     
     registrationArray = @[registration1, registration2, registration3, registration4];
-
+    
+    
+    NSDictionary *appointmentRegistration1 = @{@"department":@"消化内科", @"daifu":@"扁鹊"};
+    appointmentRegistrationArray = @[appointmentRegistration1];
     
 
 
@@ -419,6 +422,10 @@
 -(NSArray *)get_registrationList
 {
     return registrationArray;
+}
+-(NSArray *)get_appointmentRegistrations
+{
+    return appointmentRegistrationArray;
 }
 
 @end

@@ -10,4 +10,9 @@
 
 @interface LZRegisterAtHospitalViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView1;
+
+- (IBAction)btnRegisterTouchUpInside:(id)sender;
+
 @end

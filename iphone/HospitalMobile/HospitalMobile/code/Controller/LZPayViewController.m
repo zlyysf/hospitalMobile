@@ -52,7 +52,8 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [self dismissViewControllerAnimated:YES completion:NO];
+//    [self dismissViewControllerAnimated:YES completion:NO];
+    [self.navigationController popViewControllerAnimated:true];
 
 }
 

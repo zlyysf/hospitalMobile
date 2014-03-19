@@ -28,5 +28,6 @@
 -(NSDictionary *)get_jiaofeiInfoByJiancha:(NSString*)jianchaId;
 
 -(NSArray *)get_registrationList;
+-(NSArray *)get_appointmentRegistrations;
 
 @end

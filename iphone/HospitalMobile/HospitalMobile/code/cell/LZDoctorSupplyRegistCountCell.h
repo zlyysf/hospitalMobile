@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelCount;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnRegister;
+
 
 @end
 
