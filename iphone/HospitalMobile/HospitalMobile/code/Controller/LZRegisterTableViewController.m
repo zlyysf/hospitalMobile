@@ -154,8 +154,6 @@
 }
 
 - (IBAction)buttonDoctorInfoInCellTouchUpInside:(id)sender {
-    UIButton *btn = sender;
-    int rowPos = btn.tag;
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZDoctorInfoViewController *subController = [board instantiateViewControllerWithIdentifier:@"LZDoctorInfoViewController"];
     [self.navigationController pushViewController:subController animated:YES];
@@ -163,7 +161,7 @@
 
 - (IBAction)buttonRegisterInCellTouchUpInside:(id)sender {
     UIButton *button = sender;
-    int rowIdx = button.tag;
+    NSInteger rowIdx = button.tag;
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZPayRegistrationViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZPayRegistrationViewController"];
     NSMutableDictionary *regDict = [NSMutableDictionary dictionary];

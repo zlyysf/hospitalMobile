@@ -41,7 +41,7 @@
 
 - (IBAction)btnLoginTouchUpInside:(id)sender {
     [LZDemoData singleton].isLogined = true;
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)btnSignupTouchUpInside:(id)sender {

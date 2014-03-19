@@ -72,7 +72,7 @@
     
     UIStoryboard *sbMessage = [UIStoryboard storyboardWithName:@"Message" bundle:nil];
     UINavigationController *messageNavigationController = [sbMessage instantiateViewControllerWithIdentifier:@"LZUIMessageNavigationController"];
-    messageNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"航空总医院" image:[UIImage imageNamed:@"message.png"] tag:1];
+    messageNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"交流" image:[UIImage imageNamed:@"message.png"] tag:1];
     [controllers addObject:messageNavigationController];
     
     self.viewControllers = controllers;
@@ -91,7 +91,7 @@
         LZLoginViewController *LoginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LZLoginViewController"];
         UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:LoginViewController];
         
-        [self presentModalViewController:navController animated:YES];
+        [self presentViewController:navController animated:YES completion:nil];
     }
 
     

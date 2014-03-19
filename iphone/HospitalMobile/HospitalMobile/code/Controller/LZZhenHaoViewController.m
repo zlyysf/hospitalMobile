@@ -66,9 +66,6 @@
 
 - (void)cellbuttonPayCheckTouchUpInside:(UIButton*)sender {
     //    NSLog(@"cellbuttonPayCheckTouchUpInside sender=%@",sender);
-    int rowPos = sender.tag - CellButtonTagOffsetToContainRowPosition;
-    NSDictionary *checkDict = checkAry[rowPos];
-    
     UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"交费" message:@"交费" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertview show];
 
@@ -76,7 +73,7 @@
 }
 - (void)cellbuttonSeeResultTouchUpInside:(UIButton*)sender {
     //    NSLog(@"cellbuttonSeeResultTouchUpInside sender=%@",sender);
-    int rowPos = sender.tag - CellButtonTagOffsetToContainRowPosition;
+    NSInteger rowPos = sender.tag - CellButtonTagOffsetToContainRowPosition;
     NSDictionary *checkDict = checkAry[rowPos];
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
     if ([@"血液生化" isEqualToString:checkDict[@"name"]]){
@@ -121,7 +118,7 @@
         
         NSDate *dtRegisterTime = zhenhaoDict[@"RegisterTime"];
         NSDateFormatter *dtfmt = [[NSDateFormatter alloc]init];
-        [dtfmt setDateFormat:@"yyyy年MM月dd日"];
+        [dtfmt setDateFormat:@"MM月dd日"];
         NSString *sRegisterDate = [dtfmt stringFromDate:dtRegisterTime];
         QueuePlaceCell.labelDate.text = [NSString stringWithFormat:@"%@ %@",sRegisterDate,[LZUtility getDaySpanName:dtRegisterTime]];
         

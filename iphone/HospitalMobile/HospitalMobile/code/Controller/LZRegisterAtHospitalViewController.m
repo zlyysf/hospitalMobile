@@ -94,7 +94,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section==0){
-        return 70;
+        return 50;
     }else if (indexPath.section==1){
         return 40;
     }else if(indexPath.section==2){
@@ -108,6 +108,7 @@
 {
 	NSString *sectionTitle = nil;
     if (section==0){
+        sectionTitle = @"当天放号时间";
 
     }else if (section==1){
         sectionTitle = @"预约挂号";

@@ -12,14 +12,14 @@
 
 @interface LZKeyboardToolBarToHideKB ()
 //@property (assign,nonatomic)id<LZKeyboardToolBarDelegate>donedelegate;
-@property (assign,nonatomic)UIResponder *textCtrl;
+@property (assign,nonatomic)UIResponder *textControl;
 @end
 
 
 
 @implementation LZKeyboardToolBarToHideKB
 //@synthesize donedelegate;
-@synthesize textCtrl;
+@synthesize textControl;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -35,7 +35,7 @@
     self = [super initWithFrame:frame];
     if (self) {
 //        self.donedelegate = toolbarDelegate;
-        self.textCtrl = textCtrl;
+        self.textControl = textCtrl;
         UIBarButtonItem *spaceBarItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc]initWithTitle:buttonTitle style:UIBarButtonItemStyleDone target:self action:@selector(doneButtonClicked)];
         NSArray *items = [[NSArray alloc]initWithObjects:spaceBarItem,doneButtonItem, nil];
@@ -61,8 +61,8 @@
 //    {
 //        [self.donedelegate KeyboardToolBarDoneButtonClicked];
 //    }
-    if(textCtrl!=nil){
-        [textCtrl resignFirstResponder];
+    if(textControl!=nil){
+        [textControl resignFirstResponder];
     }
 }
 /*

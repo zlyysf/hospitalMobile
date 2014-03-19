@@ -76,12 +76,11 @@
         FeeCell.labelName.text =  [NSString stringWithFormat:@"%@", jiancha[@"name"]];
     }
     FeeCell.labelTotal.text = [NSString stringWithFormat:@"总计:%@", feeInfo[@"total"]];
-    FeeCell.labelTotal.textAlignment = NSTextAlignmentRight;
     FeeCell.labelOwnExpense.text = [NSString stringWithFormat:@"自费:%@", feeInfo[@"shouldPay"]];
-    FeeCell.labelOwnExpense.textAlignment = NSTextAlignmentRight;
     
     NSDateFormatter *dtfmt = [[NSDateFormatter alloc]init];
-    [dtfmt setDateFormat:@"yyyyMMdd HH:mm"];
+    [dtfmt setDateFormat:@"MM月dd日"];
+
     FeeCell.labelTime.text = [dtfmt stringFromDate:feeInfo[@"createTime"]];
     NSNumber *nmPaid = feeInfo[@"isPaid"];
     FeeCell.buttonPay.hidden = ([nmPaid intValue]==1);

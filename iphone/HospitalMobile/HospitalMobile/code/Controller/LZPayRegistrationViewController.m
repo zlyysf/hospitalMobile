@@ -125,7 +125,6 @@
  */
 
 - (IBAction)btnPayTouchUpInside:(id)sender {
-    UIButton *button = sender;
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZPayViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZPayViewController"];
     [self.navigationController pushViewController:subController animated:YES];

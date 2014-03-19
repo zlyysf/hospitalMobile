@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"看病";
+    self.navigationItem.title = @"就诊";
     
     zhenhaoAry = [[LZDemoData singleton]get_zhenhaoAry];
 
@@ -67,7 +67,7 @@
     static NSString *CellIdentifier = @"LZZhenHaoCell";
     LZZhenHaoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    int rowPos = indexPath.row;
+    NSInteger rowPos = indexPath.row;
     NSDictionary *zhenhao = zhenhaoAry[rowPos];
     
     cell.labelDaiFu.text = zhenhao[@"daifu"];
@@ -76,7 +76,7 @@
     
     NSDate *dtRegisterTime = zhenhao[@"RegisterTime"];
     NSDateFormatter *dtfmt = [[NSDateFormatter alloc]init];
-    [dtfmt setDateFormat:@"yyyy年MM月dd日"];
+    [dtfmt setDateFormat:@"MM月dd日"];
     NSString *sRegisterDate = [dtfmt stringFromDate:dtRegisterTime];
     cell.labelDate.text = [NSString stringWithFormat:@"%@ %@",sRegisterDate,[LZUtility getDaySpanName:dtRegisterTime]];
     
@@ -89,7 +89,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int rowPos = indexPath.row;
+    NSInteger rowPos = indexPath.row;
     NSDictionary *zhenhao = zhenhaoAry[rowPos];
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
     LZZhenHaoViewController * ZhenHaoViewController = [sboard instantiateViewControllerWithIdentifier:@"LZZhenHaoViewController"];
