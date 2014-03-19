@@ -53,9 +53,9 @@
     // Return the number of rows in the section.
     
     if (section == 0)
-        return 8;
+        return 11;
     else
-        return 5;
+        return 8;
 }
 
 /*

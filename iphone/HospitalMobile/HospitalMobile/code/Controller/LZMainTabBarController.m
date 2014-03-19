@@ -54,19 +54,19 @@
     nav.tabBarItem = tabBarItem;
     [controllers addObject:nav];
     
+    UIStoryboard *sbSeeDoctor = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
+    LZSeeDoctorViewController *SeeDoctorViewController = [sbSeeDoctor instantiateViewControllerWithIdentifier:@"LZSeeDoctorViewController"];
+    nav = [[ UINavigationController alloc] initWithRootViewController:SeeDoctorViewController];
+    nav.navigationBar.translucent = NO;
+    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"就诊" image:[UIImage imageNamed:@"exam.png"] tag:1];
+    nav.tabBarItem = tabBarItem;
+    [controllers addObject:nav];
+    
     UIStoryboard *sbFeeList = [UIStoryboard storyboardWithName:@"FeeList" bundle:nil];
     LZFeeListViewController *FeeListViewController = [sbFeeList instantiateViewControllerWithIdentifier:@"LZFeeListViewController"];
     nav = [[ UINavigationController alloc] initWithRootViewController:FeeListViewController];
     nav.navigationBar.translucent = NO;
     tabBarItem = [[UITabBarItem alloc]initWithTitle:@"交费" image:[UIImage imageNamed:@"cash.png"] tag:1];
-    nav.tabBarItem = tabBarItem;
-    [controllers addObject:nav];
-    
-    UIStoryboard *sbSeeDoctor = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
-    LZSeeDoctorViewController *SeeDoctorViewController = [sbSeeDoctor instantiateViewControllerWithIdentifier:@"LZSeeDoctorViewController"];
-    nav = [[ UINavigationController alloc] initWithRootViewController:SeeDoctorViewController];
-    nav.navigationBar.translucent = NO;
-    tabBarItem = [[UITabBarItem alloc]initWithTitle:@"看病" image:[UIImage imageNamed:@"exam.png"] tag:1];
     nav.tabBarItem = tabBarItem;
     [controllers addObject:nav];
     
