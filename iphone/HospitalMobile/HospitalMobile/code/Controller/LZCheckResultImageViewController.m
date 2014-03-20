@@ -113,9 +113,12 @@
 {
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
     LZCTAViewController *imageController = [board instantiateViewControllerWithIdentifier:@"CTAImageViewController"];
-    imageController.CTAImageView.image = [UIImage imageNamed:@"cta.png"];
-    //[self.navigationController presentViewController:imageController animated:YES completion:nil];
-    [self.navigationController pushViewController:imageController animated:YES];
+    imageController.ctaImage = [UIImage imageNamed:@"cta.png"];
+    
+    UINavigationController *navigaionController = [[UINavigationController alloc] init];
+    navigaionController.viewControllers = @[imageController];
+    
+    [self presentViewController:navigaionController animated:YES completion:nil];
 }
 
 /*

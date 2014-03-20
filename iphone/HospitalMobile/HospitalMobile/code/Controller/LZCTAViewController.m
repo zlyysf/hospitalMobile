@@ -9,41 +9,61 @@
 #import "LZCTAViewController.h"
 
 @interface LZCTAViewController ()
-
+@property (strong, nonatomic) PhotoShowView *photoShowView;
+@property (assign, nonatomic) BOOL photoFullShow;
 @end
 
 @implementation LZCTAViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    PhotoShowView *photoShowView = [[PhotoShowView alloc] initWithFrame:self.view.bounds];
+    photoShowView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    photoShowView.image = self.ctaImage;
+    [photoShowView.oneTap addTarget:self action:@selector(photoShowViewTap:)];
+    [self.view addSubview:photoShowView];
+    self.photoShowView = photoShowView;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"cancel" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemTap:)];
+    self.photoFullShow = YES;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setCtaImage:(UIImage *)ctaImage
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (_ctaImage == ctaImage) return;
+    
+    _ctaImage = ctaImage;
+    
+    if ([self isViewLoaded]) {
+        self.photoShowView.image = ctaImage;
+    }
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark -
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (BOOL)photoFullShow {
+    return self.navigationController.navigationBar.hidden;
+}
+
+- (void)setPhotoFullShow:(BOOL)photoFullShow {
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:photoFullShow withAnimation:UIStatusBarAnimationFade];
+    [self.navigationController setNavigationBarHidden:photoFullShow];
+}
+
+
+#pragma mark -
+#pragma mark Tap
+- (void)leftBarButtonItemTap:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+- (void)photoShowViewTap:(id)sender
+{
+    self.photoFullShow = !self.photoFullShow;
+}
 
 @end

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoShowView.h"
 
 @interface LZCTAViewController : UIViewController
 
 @property (nonatomic,weak) IBOutlet UIImageView *CTAImageView;
+@property (strong, nonatomic) UIImage *ctaImage;
 
 @end

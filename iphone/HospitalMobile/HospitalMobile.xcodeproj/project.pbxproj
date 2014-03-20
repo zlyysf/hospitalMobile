@@ -74,6 +74,8 @@
 		B920B9D418D26E8100524445 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B920B9D318D26E8100524445 /* plus.png */; };
 		B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */; };
 		FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13239018D216D200BE900F /* LZRegisterTableViewController.m */; };
+		FC8A9F0018DADFF4009D5FA6 /* PhotoShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8A9EFD18DADFF4009D5FA6 /* PhotoShowView.m */; };
+		FC8A9F0118DADFF4009D5FA6 /* UIScrollView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8A9EFF18DADFF4009D5FA6 /* UIScrollView+Zoom.m */; };
 		FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */; };
 		FCB8D17518D3227600B9798F /* LZPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8D17418D3227600B9798F /* LZPayViewController.m */; };
 		FCB8D17718D32B4900B9798F /* hangkong_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8D17618D32B4900B9798F /* hangkong_logo.png */; };
@@ -193,6 +195,10 @@
 		B9A2F70F18D1127E0019277B /* LZInfoInputTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInfoInputTableViewController.m; sourceTree = "<group>"; };
 		FC13238F18D216D200BE900F /* LZRegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterTableViewController.h; sourceTree = "<group>"; };
 		FC13239018D216D200BE900F /* LZRegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterTableViewController.m; sourceTree = "<group>"; };
+		FC8A9EFC18DADFF4009D5FA6 /* PhotoShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShowView.h; sourceTree = "<group>"; };
+		FC8A9EFD18DADFF4009D5FA6 /* PhotoShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShowView.m; sourceTree = "<group>"; };
+		FC8A9EFE18DADFF4009D5FA6 /* UIScrollView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Zoom.h"; sourceTree = "<group>"; };
+		FC8A9EFF18DADFF4009D5FA6 /* UIScrollView+Zoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Zoom.m"; sourceTree = "<group>"; };
 		FC9F002B18D1CCE2002B675E /* LZRegisterHospitalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterHospitalCell.h; sourceTree = "<group>"; };
 		FC9F002C18D1CCE2002B675E /* LZRegisterHospitalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterHospitalCell.m; sourceTree = "<group>"; };
 		FCB8D17318D3227600B9798F /* LZPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPayViewController.h; sourceTree = "<group>"; };
@@ -246,6 +252,10 @@
 		08C7EFEA18D059D400159471 /* libUI */ = {
 			isa = PBXGroup;
 			children = (
+				FC8A9EFC18DADFF4009D5FA6 /* PhotoShowView.h */,
+				FC8A9EFD18DADFF4009D5FA6 /* PhotoShowView.m */,
+				FC8A9EFE18DADFF4009D5FA6 /* UIScrollView+Zoom.h */,
+				FC8A9EFF18DADFF4009D5FA6 /* UIScrollView+Zoom.m */,
 				08C7EFEE18D064EA00159471 /* LZKeyboardToolBarToHideKB.h */,
 				08C7EFEF18D064EA00159471 /* LZKeyboardToolBarToHideKB.m */,
 			);
@@ -592,6 +602,7 @@
 				B920B9CE18D2638200524445 /* LZMessageViewController.m in Sources */,
 				08C7EFE618D022DF00159471 /* LZPrescribeMedicineItemCell.m in Sources */,
 				08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */,
+				FC8A9F0018DADFF4009D5FA6 /* PhotoShowView.m in Sources */,
 				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
 				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
 				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
@@ -599,6 +610,7 @@
 				FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */,
 				08C7EFF018D064EA00159471 /* LZKeyboardToolBarToHideKB.m in Sources */,
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
+				FC8A9F0118DADFF4009D5FA6 /* UIScrollView+Zoom.m in Sources */,
 				08055DFD18D2D55E001C02C0 /* LZFeeCell.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
 				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,
