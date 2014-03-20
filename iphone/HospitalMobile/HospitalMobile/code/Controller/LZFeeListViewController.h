@@ -10,4 +10,15 @@
 
 @interface LZFeeListViewController : UITableViewController<UITableViewDelegate>
 
+- (IBAction)btnPayTouchUpInside:(id)sender;
+
+
+- (IBAction)btnLineUpTouchUpInside:(id)sender;
+
+
+
+
+
+
+
 @end

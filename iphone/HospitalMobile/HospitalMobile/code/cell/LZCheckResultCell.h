@@ -14,6 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonPayCheck;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonLineUp;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *labelWaitQueueInfo;
 
 

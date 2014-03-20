@@ -12,4 +12,9 @@
 
 @property (strong,nonatomic)NSDictionary *zhenhaoDict;
 
+
+- (IBAction)btnLineUpInCellTouchUpInside:(id)sender;
+
+
+
 @end

@@ -23,10 +23,13 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTotal;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelLineInfo;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonPay;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonLineUp;
 
 
 @end

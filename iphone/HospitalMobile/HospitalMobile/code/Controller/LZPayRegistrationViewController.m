@@ -8,6 +8,7 @@
 
 #import "LZPayRegistrationViewController.h"
 #import "LZPayViewController.h"
+#import "LZDemoData.h"
 
 @interface LZPayRegistrationViewController ()
 
@@ -28,14 +29,64 @@
 {
     [super viewDidLoad];
     
+    NSDictionary *jiaofeiInfo1,*jianchaInfo1;
+    bool forJiancha = false;
     
-    self.labelDepartment.text = self.registrationDict[@"department"];
-    NSString *doctorOrNormal = self.registrationDict[@"daifu"];
-    if (doctorOrNormal.length==0){
-        doctorOrNormal = @"普通号";
+    if ([self.payType isEqualToString:@"PayRegistration"]){
+        self.labelDepartment.text = self.registrationDict[@"department"];
+        NSString *doctorOrNormal = self.registrationDict[@"daifu"];
+        if (doctorOrNormal.length==0){
+            doctorOrNormal = @"普通号";
+        }
+        self.labelDoctor.text = doctorOrNormal;
+    }else if ([self.payType isEqualToString:@"jiaofei"]){
+        NSString *jiaofeiType = self.jiaofeiInfo[@"type"];
+        if ([jiaofeiType isEqualToString:@"jiancha"]){
+            NSString *jianchaId = self.jiaofeiInfo[@"id_jiancha"];
+            NSDictionary *jianchaInfo = [[LZDemoData singleton]get_jianchaById:jianchaId];
+            
+            forJiancha = true;
+            jiaofeiInfo1 = self.jiaofeiInfo;
+            jianchaInfo1 = jianchaInfo;
+            
+        }else if([jiaofeiType isEqualToString:@"zhenhao"]){
+            NSString *zhenhaoId = self.jiaofeiInfo[@"id_zhenhao"];
+            NSDictionary *zhenhaoInfo = [[LZDemoData singleton]get_zhenhaoById:zhenhaoId];
+            self.labelDepartment.text = zhenhaoInfo[@"department"];
+            self.labelDoctor.text = zhenhaoInfo[@"daifu"];
+            self.labelCheckName.text = @"";
+            
+            NSNumber *nmTotal = self.jiaofeiInfo[@"total"];
+            double amountSelf = [nmTotal doubleValue]*0.3;
+            double amountYibao = [nmTotal doubleValue]*0.7;
+            self.labelAmountTotal.text = [NSString stringWithFormat:@"%.2f",[nmTotal doubleValue]];
+            self.labelAmountYibao.text = [NSString stringWithFormat:@"%.2f",amountYibao];
+            self.labelAmountSelf.text = [NSString stringWithFormat:@"%.2f",amountSelf];
+        }
+        
+    }else if ([self.payType isEqualToString:@"jiancha"]){
+        NSString *jiaofeiId = self.jianchaInfo[@"id_jiaofei"];
+        NSDictionary *jiaofeiInfo = [[LZDemoData singleton]get_jiaofeiById:jiaofeiId];
+        
+        forJiancha = true;
+        jiaofeiInfo1 = jiaofeiInfo;
+        jianchaInfo1 = self.jianchaInfo;
     }
-    self.labelDoctor.text = doctorOrNormal;
-
+    
+    if(forJiancha){
+        self.labelDepartment.text = @"";
+        self.labelDoctor.text = @"";
+        self.labelCheckName.text = jianchaInfo1[@"name"];
+        
+        NSNumber *nmTotal = jiaofeiInfo1[@"total"];
+        double amountSelf = [nmTotal doubleValue]*0.3;
+        double amountYibao = [nmTotal doubleValue]*0.7;
+        self.labelAmountTotal.text = [NSString stringWithFormat:@"%.2f",[nmTotal doubleValue]];
+        self.labelAmountYibao.text = [NSString stringWithFormat:@"%.2f",amountYibao];
+        self.labelAmountSelf.text = [NSString stringWithFormat:@"%.2f",amountSelf];
+        
+        
+    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

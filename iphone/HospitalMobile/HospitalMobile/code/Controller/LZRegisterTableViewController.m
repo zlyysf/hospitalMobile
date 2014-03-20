@@ -164,6 +164,7 @@
     NSInteger rowIdx = button.tag;
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZPayRegistrationViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZPayRegistrationViewController"];
+    subController.payType = @"PayRegistration";
     NSMutableDictionary *regDict = [NSMutableDictionary dictionary];
     regDict[@"department"] = self.registrationInfo[@"department"];
     if (rowIdx>=0)

@@ -19,6 +19,7 @@
 
 #import "LZCheckResultTextViewController.h"
 #import "LZCheckResultImageViewController.h"
+#import "LZPayRegistrationViewController.h"
 
 #import "LZConstant.h"
 
@@ -66,8 +67,15 @@
 
 - (void)cellbuttonPayCheckTouchUpInside:(UIButton*)sender {
     //    NSLog(@"cellbuttonPayCheckTouchUpInside sender=%@",sender);
-    UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"交费" message:@"交费" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertview show];
+//    UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"交费" message:@"交费" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    [alertview show];
+
+    int rowIdx = sender.tag - CellButtonTagOffsetToContainRowPosition;
+    UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
+    LZPayRegistrationViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZPayRegistrationViewController"];
+    subController.payType = @"jiancha";
+    subController.jianchaInfo = checkAry[rowIdx];
+    [self.navigationController pushViewController:subController animated:YES];
 
     
 }
@@ -150,27 +158,49 @@
         LZCheckResultCell *CheckResultCell = [tableView dequeueReusableCellWithIdentifier:@"LZCheckResultCell" forIndexPath:indexPath];
         NSDictionary *jianchaItem = checkAry[indexPath.row];
         
-        NSDictionary *jiaofeiItem = [[LZDemoData singleton] get_jiaofeiInfoByJiancha:jianchaItem[@"id"]];
-        NSNumber *nmIsPaid = jiaofeiItem[@"isPaid"];
-        
+//        NSDictionary *jiaofeiItem = [[LZDemoData singleton] get_jiaofeiInfoByJiancha:jianchaItem[@"id"]];
+//        NSNumber *nmIsPaid = jiaofeiItem[@"isPaid"];
+//        CheckResultCell.buttonPayCheck.hidden = ([nmIsPaid intValue]==1);
         CheckResultCell.labelCheckItemName.text = jianchaItem[@"name"];
-        CheckResultCell.buttonPayCheck.hidden = ([nmIsPaid intValue]==1);
-        CheckResultCell.labelWaitQueueInfo.text = @"前面还有3个";
-        NSString *sResultOutcomeState;
-        if ([ @"已审核" isEqualToString: jianchaItem[@"checkState"]]){
-            sResultOutcomeState = [NSString stringWithFormat:@"结果已出"];
-            CheckResultCell.labelResultEstimateTime.hidden = true;
+        NSString *state = jianchaItem[@"checkState"];
+        CheckResultCell.labelResultOutcomeState.text = state;
+        
+
+        if ([ @"已审核" isEqualToString: state]){
             CheckResultCell.buttonSeeResult.hidden = false;
-        }else{
-            sResultOutcomeState = [NSString stringWithFormat:@"结果未出"];
+            CheckResultCell.buttonPayCheck.hidden = true;
+            CheckResultCell.buttonLineUp.hidden = true;
+            CheckResultCell.labelWaitQueueInfo.hidden = true;
+            CheckResultCell.labelResultEstimateTime.hidden = true;
+        }else if ([ @"未交费" isEqualToString: state]){
+            CheckResultCell.buttonSeeResult.hidden = true;
+            CheckResultCell.buttonPayCheck.hidden = false;
+            CheckResultCell.buttonLineUp.hidden = true;
+            CheckResultCell.labelWaitQueueInfo.hidden = true;
+            CheckResultCell.labelResultEstimateTime.hidden = true;
+        }else if ([ @"待排队" isEqualToString: state]){
+            CheckResultCell.buttonSeeResult.hidden = true;
+            CheckResultCell.buttonPayCheck.hidden = true;
+            CheckResultCell.buttonLineUp.hidden = false;
+            CheckResultCell.labelWaitQueueInfo.hidden = true;
+            CheckResultCell.labelResultEstimateTime.hidden = true;
+        }else if ([ @"待检查" isEqualToString: state]){
+            CheckResultCell.buttonSeeResult.hidden = true;
+            CheckResultCell.buttonPayCheck.hidden = true;
+            CheckResultCell.buttonLineUp.hidden = true;
+            CheckResultCell.labelWaitQueueInfo.hidden = false;
+            CheckResultCell.labelResultEstimateTime.hidden = true;
+            CheckResultCell.labelWaitQueueInfo.text = @"前面还有3个";
+        }else if ([ @"等结果" isEqualToString: state]){
+            CheckResultCell.buttonSeeResult.hidden = true;
+            CheckResultCell.buttonPayCheck.hidden = true;
+            CheckResultCell.buttonLineUp.hidden = true;
+            CheckResultCell.labelWaitQueueInfo.hidden = true;
             CheckResultCell.labelResultEstimateTime.hidden = false;
             CheckResultCell.labelResultEstimateTime.text = @"1小时后";
-            CheckResultCell.buttonSeeResult.hidden = true;
         }
-            
-        CheckResultCell.labelResultOutcomeState.text = sResultOutcomeState;
         
-//        NSLog(@"CheckResultCell.buttonPayCheck.tag=%d",CheckResultCell.buttonPayCheck.tag);
+        //        NSLog(@"CheckResultCell.buttonPayCheck.tag=%d",CheckResultCell.buttonPayCheck.tag);
         if(CheckResultCell.buttonPayCheck.tag == 0){//这里用tag既存行号，又判断是否加过事件处理函数
             [CheckResultCell.buttonPayCheck addTarget:self action:@selector(cellbuttonPayCheckTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -342,6 +372,11 @@
 
 
 
+
+- (IBAction)btnLineUpInCellTouchUpInside:(id)sender {
+    UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"排队" message:@"您的排队序号为123，前面还有45" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertview show];
+}
 @end
 
 

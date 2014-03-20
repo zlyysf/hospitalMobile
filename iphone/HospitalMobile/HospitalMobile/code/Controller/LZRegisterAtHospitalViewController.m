@@ -132,6 +132,7 @@
     UIButton *button = sender;
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZPayRegistrationViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZPayRegistrationViewController"];
+    subController.payType = @"PayRegistration";
     subController.registrationDict = self.appointmentRegistrations[button.tag];
     [self.navigationController pushViewController:subController animated:YES];
 }

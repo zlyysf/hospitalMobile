@@ -21,6 +21,8 @@
 -(NSArray *)get_jiaofeiAry;
 -(NSDictionary *)get_zhenhaoById:(NSString*)zhenhaoId;
 -(NSDictionary *)get_jianchaById:(NSString*)jianchaId;
+-(NSDictionary *)get_jiaofeiById:(NSString*)jiaofeiId;
+
 -(NSArray *)get_jianchaAryByZhenhao:(NSString*)zhenhaoId;
 -(NSArray *)get_yaopinAryByZhenhao:(NSString*)zhenhaoId;
 

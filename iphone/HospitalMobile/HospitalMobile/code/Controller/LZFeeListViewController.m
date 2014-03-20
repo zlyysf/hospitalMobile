@@ -9,6 +9,7 @@
 #import "LZFeeListViewController.h"
 #import "LZFeeCell.h"
 #import "LZDemoData.h"
+#import "LZPayRegistrationViewController.h"
 
 @interface LZFeeListViewController ()
 
@@ -63,7 +64,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LZFeeCell *FeeCell = [tableView dequeueReusableCellWithIdentifier:@"LZFeeCell" forIndexPath:indexPath];
-    NSDictionary *feeInfo = feeAry[indexPath.row];
+    int rowIdx = indexPath.row;
+    NSDictionary *feeInfo = feeAry[rowIdx];
+    
+    FeeCell.buttonLineUp.hidden = true;
+    FeeCell.labelLineInfo.hidden = true;
+
     
     NSString *feeType = feeInfo[@"type"];
     if ([feeType isEqualToString:@"zhenhao"]){
@@ -74,6 +80,14 @@
         NSString *jianchaId = feeInfo[@"id_jiancha"];
         NSDictionary *jiancha = [[LZDemoData singleton] get_jianchaById:jianchaId];
         FeeCell.labelName.text =  [NSString stringWithFormat:@"%@", jiancha[@"name"]];
+        
+        if ([@"待排队" isEqualToString: jiancha[@"checkState"]]){
+            FeeCell.buttonLineUp.hidden = false;
+            FeeCell.buttonLineUp.tag = indexPath.row;
+        }else if([@"待检查" isEqualToString: jiancha[@"checkState"]]){
+            FeeCell.labelLineInfo.hidden = false;
+            FeeCell.labelLineInfo.text = [NSString stringWithFormat:@"排队序号:%@, 前面还有:%d",jiancha[@"seq"],2];
+        }
     }
     FeeCell.labelTotal.text = [NSString stringWithFormat:@"总计:%@", feeInfo[@"total"]];
     FeeCell.labelOwnExpense.text = [NSString stringWithFormat:@"自费:%@", feeInfo[@"shouldPay"]];
@@ -84,13 +98,15 @@
     FeeCell.labelTime.text = [dtfmt stringFromDate:feeInfo[@"createTime"]];
     NSNumber *nmPaid = feeInfo[@"isPaid"];
     FeeCell.buttonPay.hidden = ([nmPaid intValue]==1);
+    FeeCell.buttonPay.tag = indexPath.row;
+    
     
     return FeeCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 100;
 }
 
 /*
@@ -144,4 +160,19 @@
 
  */
 
+- (IBAction)btnPayTouchUpInside:(id)sender {
+    UIButton *button = sender;
+    int rowIdx = button.tag;
+    UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
+    LZPayRegistrationViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZPayRegistrationViewController"];
+    subController.payType = @"jiaofei";
+    subController.jiaofeiInfo = feeAry[rowIdx];
+    [self.navigationController pushViewController:subController animated:YES];
+}
+
+- (IBAction)btnLineUpTouchUpInside:(id)sender {
+    UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"排队" message:@"您的排队序号为123，前面还有45" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertview show];
+
+}
 @end
