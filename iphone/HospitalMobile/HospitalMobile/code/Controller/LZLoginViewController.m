@@ -9,6 +9,7 @@
 #import "LZLoginViewController.h"
 #import "LZSignUpViewController.h"
 #import "LZDemoData.h"
+#import "LZMainTabBarController.h"
 
 @interface LZLoginViewController ()
 
@@ -31,6 +32,7 @@
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"登录";
     self.tfPassword.secureTextEntry = true;
+    [self.navigationItem setHidesBackButton:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,8 +42,10 @@
 }
 
 - (IBAction)btnLoginTouchUpInside:(id)sender {
-    [LZDemoData singleton].isLogined = true;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [LZDemoData singleton].isLogined = YES;
+    LZMainTabBarController *tabBarController = (LZMainTabBarController *)self.navigationController.parentViewController;
+    tabBarController.tabBar.hidden = NO;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)btnSignupTouchUpInside:(id)sender {

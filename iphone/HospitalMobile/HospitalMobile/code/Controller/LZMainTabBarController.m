@@ -40,6 +40,12 @@
     
     UIStoryboard *sbInfoInput = [UIStoryboard storyboardWithName:@"InfoInput" bundle:nil];
     UINavigationController *infoInputNavigationController = [sbInfoInput instantiateViewControllerWithIdentifier:@"UIInfoInputNavigationController"];
+    if (![[LZDemoData singleton]isLogined]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LZLoginViewController *LoginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LZLoginViewController"];
+        [infoInputNavigationController pushViewController:LoginViewController animated:NO];
+        self.tabBar.hidden = YES;
+    }
     tabBarItem = [[UITabBarItem alloc]initWithTitle:@"信息" image:[UIImage imageNamed:@"infoinput.png"] tag:0];
     infoInputNavigationController.tabBarItem = tabBarItem;
     [controllers addObject:infoInputNavigationController];
@@ -80,21 +86,6 @@
 //    {
 //        self.tabBar.translucent = NO;
 //    }
-
-    
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    if (![[LZDemoData singleton]isLogined]) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        LZLoginViewController *LoginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LZLoginViewController"];
-        UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:LoginViewController];
-        
-        [self presentViewController:navController animated:YES completion:nil];
-    }
-
-    
 
     
 }
