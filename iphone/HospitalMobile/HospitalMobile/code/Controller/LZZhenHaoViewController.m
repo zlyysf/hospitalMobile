@@ -294,15 +294,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    int rowPos = indexPath.row;
-//    NSDictionary *zhenhao = zhenhaoAry[rowPos];
-//    UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
-//    LZZhenHaoViewController * ZhenHaoViewController = [sboard instantiateViewControllerWithIdentifier:@"LZZhenHaoViewController"];
-//    ZhenHaoViewController.zhenhaoDict = zhenhao;
-//    
-//    ZhenHaoViewController.title = @"诊号";
-//    [self.navigationController pushViewController:ZhenHaoViewController animated:YES];
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 /*
 // Override to support conditional editing of the table view.

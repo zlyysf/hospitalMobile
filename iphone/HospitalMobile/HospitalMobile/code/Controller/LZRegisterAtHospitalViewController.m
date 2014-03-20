@@ -119,8 +119,10 @@
     return sectionTitle;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"RegisterAtHospital" bundle:nil];
     LZRegisterTableViewController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZRegisterTableViewController"];
     subController.registrationInfo = self.mockRegistrationList[indexPath.row];

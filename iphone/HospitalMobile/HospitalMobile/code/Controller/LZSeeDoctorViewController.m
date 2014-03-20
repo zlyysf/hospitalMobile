@@ -89,6 +89,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     NSInteger rowPos = indexPath.row;
     NSDictionary *zhenhao = zhenhaoAry[rowPos];
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"SeeDoctor" bundle:nil];
@@ -99,6 +100,8 @@
     [self.navigationController pushViewController:ZhenHaoViewController animated:YES];
     
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

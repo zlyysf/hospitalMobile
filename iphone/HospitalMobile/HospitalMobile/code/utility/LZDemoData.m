@@ -365,7 +365,11 @@
                        [NSNumber numberWithDouble:5.0],@"total", [NSNumber numberWithDouble:3.0],@"shouldPay", [NSNumber numberWithInt:1],@"isPaid", dtNow,@"createTime",
                        nil];
     
-    allJiaofeiAry = [NSMutableArray arrayWithObjects:zhenhao1jiaofei,jiancha1jiaofei,jiancha2jiaofei,jiancha3jiaofei,jiancha4jiaofei,jiancha5jiaofei,jiancha6jiaofei, zhenhao2jiaofei,zhenhao3jiaofei, nil];
+    allJiaofeiAry = [NSMutableArray arrayWithObjects:
+                     zhenhao2jiaofei,
+                     jiancha3jiaofei,jiancha4jiaofei,
+                     jiancha5jiaofei,
+                     zhenhao1jiaofei,jiancha1jiaofei,jiancha2jiaofei, jiancha6jiaofei, zhenhao3jiaofei, nil];
 
     
     NSDictionary *registration1 = @{@"department":@"产科", @"expertNum":@3, @"normalTickets":@10, @"expertTickets":@5,

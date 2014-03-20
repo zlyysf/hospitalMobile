@@ -72,7 +72,10 @@
 	return rowNumOfOneSection;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    NSString *registration;
@@ -141,6 +144,8 @@
 {
 	return 44.f;
 }
+
+
 
 #pragma UIAlertView delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

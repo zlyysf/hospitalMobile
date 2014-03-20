@@ -108,6 +108,11 @@
     return 0;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
+
 #pragma mark- cell button event handler
 - (void)seeImage:(UIButton *)button
 {

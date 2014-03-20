@@ -76,6 +76,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
