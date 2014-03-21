@@ -276,9 +276,9 @@
                         @"呼吸内科",@"applyDepartment", @"",@"operator", @"",@"checkWay",
                         nil];
     zhenhao1jiancha4 = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                        @"jiancha0104",@"id",@"jiancha0104",@"code", @"zhenhao001",@"id_zhenhao", @"尿常规",@"name", @"jiaofei010401",@"id_jiaofei",
-                        [NSNumber numberWithInt:4],@"seq",  @"",@"checkType", @"",@"checkPosition", @"",@"diseaseName",
-                        @"待排队",@"checkState",
+                        @"jiancha0104",@"id",@"jiancha0104",@"code", @"zhenhao001",@"id_zhenhao", @"甲功五项",@"name", @"jiaofei010401",@"id_jiaofei",
+                        [NSNumber numberWithInt:14],@"seq",  @"",@"checkType", @"",@"checkPosition", @"",@"diseaseName",
+                        @"待检查",@"checkState",//@"待排队",@"checkState",
                         @"呼吸内科",@"applyDepartment", @"",@"operator", @"",@"checkWay",
                         nil];
     zhenhao1jiancha5 = [NSMutableDictionary dictionaryWithObjectsAndKeys:

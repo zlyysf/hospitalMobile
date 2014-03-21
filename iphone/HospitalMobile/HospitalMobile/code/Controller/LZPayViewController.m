@@ -38,7 +38,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.passwordField resignFirstResponder];
-    NSString *alertMessage = [NSString stringWithFormat:@"缴费成功，您的挂号顺序为12，目前已看到4号，估计等待时间为60分钟"];
+    NSString *alertMessage = [NSString stringWithFormat:@"缴费成功，您的排队顺序为12，目前已经到4号，估计等待时间为60分钟"];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                     message:alertMessage

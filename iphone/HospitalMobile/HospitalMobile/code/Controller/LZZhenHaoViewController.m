@@ -190,7 +190,7 @@
             CheckResultCell.buttonLineUp.hidden = true;
             CheckResultCell.labelWaitQueueInfo.hidden = false;
             CheckResultCell.labelResultEstimateTime.hidden = true;
-            CheckResultCell.labelWaitQueueInfo.text = @"前面还有3个";
+            CheckResultCell.labelWaitQueueInfo.text = [NSString stringWithFormat:@"排队序号:%@,前面还有:3",jianchaItem[@"seq"]];
         }else if ([ @"等结果" isEqualToString: state]){
             CheckResultCell.buttonSeeResult.hidden = true;
             CheckResultCell.buttonPayCheck.hidden = true;
