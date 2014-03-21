@@ -10,6 +10,8 @@
 
 @interface LZInfoInputTableViewController ()
 
+@property (nonatomic, assign) NSUInteger genderIndex;
+
 @end
 
 @implementation LZInfoInputTableViewController
@@ -54,8 +56,13 @@
     
     if (section == 0)
         return 11;
-    else
-        return 8;
+    else {
+        if (self.genderIndex == 0)
+            return 7;
+        else
+            return 8;
+    }
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -148,6 +155,15 @@
         sender.tintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
     else
         sender.tintColor = [UIColor grayColor];
+}
+
+- (IBAction)switchGender:(id)sender
+{
+    UISegmentedControl *genderSegment = sender;
+    if (self.genderIndex != genderSegment.selectedSegmentIndex) {
+        self.genderIndex = genderSegment.selectedSegmentIndex;
+        [self.tableView reloadData];
+    }
 }
 
 @end

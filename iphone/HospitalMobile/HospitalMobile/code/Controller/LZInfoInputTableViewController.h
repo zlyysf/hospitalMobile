@@ -12,5 +12,6 @@
 
 
 - (IBAction)doSave:(UIBarButtonItem *)sender;
+- (IBAction)switchGender:(id)sender;
 
 @end
