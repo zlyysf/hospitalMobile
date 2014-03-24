@@ -410,7 +410,7 @@
                                                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如高血压，糖尿病，心脏病等疾病" minimumFontSize="17" clearButtonMode="whileEditing" id="hiu-Tn-hcd">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例如高血压，糖尿病，心脏病等疾病" minimumFontSize="17" clearButtonMode="whileEditing" id="hiu-Tn-hcd">
                                                     <rect key="frame" x="85" y="7" width="215" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

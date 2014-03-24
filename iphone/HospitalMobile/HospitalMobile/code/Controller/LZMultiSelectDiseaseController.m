@@ -74,7 +74,7 @@
             [checkedItems addObject:diseaseAry[i]];
         }
     }//for
-    NSString *strSelectedItems = [checkedItems componentsJoinedByString:@","];
+    NSString *strSelectedItems = [checkedItems componentsJoinedByString:@"，"];
     if (self.outerTextField != nil){
         self.outerTextField.text = strSelectedItems;
     }

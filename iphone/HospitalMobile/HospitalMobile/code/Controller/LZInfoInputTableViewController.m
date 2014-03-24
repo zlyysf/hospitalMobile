@@ -71,6 +71,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
+    if (indexPath.section == 1 && indexPath.row == 1){
+        [self showMultiSelectDiseaseController:self.textfieldDiseaseHistory];
+    }
 }
 
 /*
@@ -171,11 +174,14 @@
 
 -(void)textFieldOnClickHandler:(UITextField*)tf
 {
-    UITextField *tf1 = tf;
-    [tf1 resignFirstResponder];
+    [tf resignFirstResponder];
+    [self showMultiSelectDiseaseController:tf];
+}
+-(void)showMultiSelectDiseaseController:(UITextField*)tf
+{
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"InfoInput" bundle:nil];
     LZMultiSelectDiseaseController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZMultiSelectDiseaseController"];
-    subController.outerTextField = tf1;
+    subController.outerTextField = tf;
     [self.navigationController pushViewController:subController animated:YES];
 }
 
