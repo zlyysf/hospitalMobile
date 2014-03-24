@@ -7,6 +7,7 @@
 //
 
 #import "LZInfoInputTableViewController.h"
+#import "LZMultiSelectDiseaseController.h"
 
 @interface LZInfoInputTableViewController ()
 
@@ -28,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -147,6 +150,33 @@
     }
     
     return YES;
+}
+
+
+
+- (IBAction)textfieldDiseaseHistoryTouchDown:(id)sender {
+    NSLog(@"textfieldDiseaseHistoryTouchDown");
+    [self textFieldOnClickHandler:sender];
+}
+
+- (IBAction)textfieldDiseaseHistoryTouchDownRepeat:(id)sender {
+    NSLog(@"textfieldDiseaseHistoryTouchDownRepeat");//not been triggered
+    [self textFieldOnClickHandler:sender];
+}
+
+- (IBAction)textfieldDiseaseHistoryEditingDidBegin:(id)sender {
+    NSLog(@"textfieldDiseaseHistoryEditingDidBegin");
+    [self textFieldOnClickHandler:sender];
+}
+
+-(void)textFieldOnClickHandler:(UITextField*)tf
+{
+    UITextField *tf1 = tf;
+    [tf1 resignFirstResponder];
+    UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"InfoInput" bundle:nil];
+    LZMultiSelectDiseaseController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZMultiSelectDiseaseController"];
+    subController.outerTextField = tf1;
+    [self.navigationController pushViewController:subController animated:YES];
 }
 
 - (IBAction)doSave:(UIBarButtonItem *)sender {

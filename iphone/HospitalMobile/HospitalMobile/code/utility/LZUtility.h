@@ -16,4 +16,6 @@
 
 +(NSString *)getDaySpanName:(NSDate*)dt;
 
++(NSMutableArray*)generateArrayWithFillItem:(NSObject*)fillItem andArrayLength:(int)length;
+
 @end

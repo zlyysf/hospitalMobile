@@ -278,7 +278,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <userGuides>
-                                                <userLayoutGuide location="18" affinity="minY"/>
+                                                <userLayoutGuide location="19" affinity="minY"/>
                                                 <userLayoutGuide location="60" affinity="minX"/>
                                             </userGuides>
                                             <subviews>
@@ -399,7 +399,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <userGuides>
-                                                <userLayoutGuide location="21" affinity="minY"/>
+                                                <userLayoutGuide location="20" affinity="minY"/>
                                                 <userLayoutGuide location="60" affinity="minX"/>
                                             </userGuides>
                                             <subviews>
@@ -416,6 +416,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
+                                                        <action selector="textfieldDiseaseHistoryEditingDidBegin:" destination="7lS-4R-8vX" eventType="editingDidBegin" id="Cqv-5B-Bet"/>
+                                                        <action selector="textfieldDiseaseHistoryTouchDown:" destination="7lS-4R-8vX" eventType="touchDown" id="UXf-AZ-Byv"/>
+                                                        <action selector="textfieldDiseaseHistoryTouchDownRepeat:" destination="7lS-4R-8vX" eventType="touchDownRepeat" id="1hK-Yn-jrn"/>
                                                         <outlet property="delegate" destination="7lS-4R-8vX" id="UtH-N0-sO1"/>
                                                     </connections>
                                                 </textField>
@@ -617,10 +620,42 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textfieldDiseaseHistory" destination="hiu-Tn-hcd" id="bNh-tP-F9x"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQH-s1-Cxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="284"/>
+        </scene>
+        <!--Multi Select Disease Controller-->
+        <scene sceneID="Epq-Pg-Gj3">
+            <objects>
+                <tableViewController storyboardIdentifier="LZMultiSelectDiseaseController" id="CgT-mg-jQ5" customClass="LZMultiSelectDiseaseController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YdU-VU-gju">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LZSelectDiseaseCell" id="ESt-R8-l5g" customClass="LZSelectDiseaseCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ESt-R8-l5g" id="6vs-wX-oBl">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CgT-mg-jQ5" id="EHP-oA-5oN"/>
+                            <outlet property="delegate" destination="CgT-mg-jQ5" id="s8I-sI-7KB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="IFe-9H-2JV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUT-Yl-1Hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RB0-46-jOb">

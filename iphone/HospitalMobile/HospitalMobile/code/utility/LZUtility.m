@@ -53,5 +53,14 @@
     }
 }
 
++(NSMutableArray*)generateArrayWithFillItem:(NSObject*)fillItem andArrayLength:(int)length
+{
+    NSMutableArray *ary = [NSMutableArray arrayWithCapacity:length];
+    for(int i=0; i<length; i++){
+        [ary addObject:fillItem];
+    }
+    return ary;
+}
+
 
 @end

@@ -11,7 +11,29 @@
 @interface LZInfoInputTableViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate>
 
 
+
+
+@property (weak, nonatomic) IBOutlet UITextField *textfieldDiseaseHistory;
+
+
+
+
+- (IBAction)textfieldDiseaseHistoryTouchDown:(id)sender;
+- (IBAction)textfieldDiseaseHistoryTouchDownRepeat:(id)sender;
+
+
+- (IBAction)textfieldDiseaseHistoryEditingDidBegin:(id)sender;
+
+
+
+
+
 - (IBAction)doSave:(UIBarButtonItem *)sender;
 - (IBAction)switchGender:(id)sender;
 
 @end
+
+
+
+
+

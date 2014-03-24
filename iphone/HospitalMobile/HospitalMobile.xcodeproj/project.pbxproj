@@ -57,6 +57,8 @@
 		08CF418418E001DC00A6287E /* cb_mono_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08CF416B18E001DC00A6287E /* cb_mono_on@2x.png */; };
 		08CF418518E001DC00A6287E /* UIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CF416E18E001DC00A6287E /* UIHelpers.m */; };
 		08CF418618E001DC00A6287E /* SSCheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CF417018E001DC00A6287E /* SSCheckBoxView.m */; };
+		08CF418F18E0152300A6287E /* LZMultiSelectDiseaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CF418E18E0152300A6287E /* LZMultiSelectDiseaseController.m */; };
+		08CF419218E0155F00A6287E /* LZSelectDiseaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CF419118E0155F00A6287E /* LZSelectDiseaseCell.m */; };
 		08D97E7718CDA1EE006D5F0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7618CDA1EE006D5F0C /* Foundation.framework */; };
 		08D97E7918CDA1EE006D5F0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */; };
 		08D97E7B18CDA1EE006D5F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D97E7A18CDA1EE006D5F0C /* UIKit.framework */; };
@@ -188,6 +190,10 @@
 		08CF416E18E001DC00A6287E /* UIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelpers.m; sourceTree = "<group>"; };
 		08CF416F18E001DC00A6287E /* SSCheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCheckBoxView.h; sourceTree = "<group>"; };
 		08CF417018E001DC00A6287E /* SSCheckBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCheckBoxView.m; sourceTree = "<group>"; };
+		08CF418D18E0152300A6287E /* LZMultiSelectDiseaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMultiSelectDiseaseController.h; sourceTree = "<group>"; };
+		08CF418E18E0152300A6287E /* LZMultiSelectDiseaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMultiSelectDiseaseController.m; sourceTree = "<group>"; };
+		08CF419018E0155F00A6287E /* LZSelectDiseaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSelectDiseaseCell.h; sourceTree = "<group>"; };
+		08CF419118E0155F00A6287E /* LZSelectDiseaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSelectDiseaseCell.m; sourceTree = "<group>"; };
 		08D97E7318CDA1EE006D5F0C /* 医院手机版.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "医院手机版.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D97E7618CDA1EE006D5F0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08D97E7818CDA1EE006D5F0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -497,6 +503,8 @@
 				08055E1C18D6BBF5001C02C0 /* LZDoctorInfoViewController.m */,
 				08355FED18D99A970075BA66 /* LZPayRegistrationViewController.h */,
 				08355FEE18D99A970075BA66 /* LZPayRegistrationViewController.m */,
+				08CF418D18E0152300A6287E /* LZMultiSelectDiseaseController.h */,
+				08CF418E18E0152300A6287E /* LZMultiSelectDiseaseController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -571,6 +579,8 @@
 				08055E1918D6B1F2001C02C0 /* LZDoctorSupplyRegistCountCell.m */,
 				08355FE718D987940075BA66 /* LZAppointmentRegistrationCell.h */,
 				08355FE818D987940075BA66 /* LZAppointmentRegistrationCell.m */,
+				08CF419018E0155F00A6287E /* LZSelectDiseaseCell.h */,
+				08CF419118E0155F00A6287E /* LZSelectDiseaseCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -723,6 +733,7 @@
 				FC13239118D216D200BE900F /* LZRegisterTableViewController.m in Sources */,
 				08C7EFE918D024AE00159471 /* LZDoctorAdviceCell.m in Sources */,
 				B920B9CE18D2638200524445 /* LZMessageViewController.m in Sources */,
+				08CF419218E0155F00A6287E /* LZSelectDiseaseCell.m in Sources */,
 				08C7EFE618D022DF00159471 /* LZPrescribeMedicineItemCell.m in Sources */,
 				08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */,
 				FC8A9F0018DADFF4009D5FA6 /* PhotoShowView.m in Sources */,
@@ -746,6 +757,7 @@
 				08D97EB018CDAB0D006D5F0C /* LZMainTabBarController.m in Sources */,
 				08055E1A18D6B1F2001C02C0 /* LZDoctorSupplyRegistCountCell.m in Sources */,
 				081228B918D1A85700681F85 /* LZCheckRecordGeneralInfoCell.m in Sources */,
+				08CF418F18E0152300A6287E /* LZMultiSelectDiseaseController.m in Sources */,
 				08355FEF18D99A970075BA66 /* LZPayRegistrationViewController.m in Sources */,
 				08C7EFE318D011E300159471 /* LZCheckResultCell.m in Sources */,
 				08055E0418D31FC0001C02C0 /* LZSignUpViewController.m in Sources */,
