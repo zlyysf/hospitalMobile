@@ -752,6 +752,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
 				INFOPLIST_FILE = "HospitalMobile/HospitalMobile-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "医院手机版";
 				WRAPPER_EXTENSION = app;
 			};
@@ -764,6 +765,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HospitalMobile/HospitalMobile-Prefix.pch";
 				INFOPLIST_FILE = "HospitalMobile/HospitalMobile-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "医院手机版";
 				WRAPPER_EXTENSION = app;
 			};
