@@ -18,16 +18,6 @@
 
 
 
-- (IBAction)textfieldDiseaseHistoryTouchDown:(id)sender;
-- (IBAction)textfieldDiseaseHistoryTouchDownRepeat:(id)sender;
-
-
-- (IBAction)textfieldDiseaseHistoryEditingDidBegin:(id)sender;
-
-
-
-
-
 - (IBAction)doSave:(UIBarButtonItem *)sender;
 - (IBAction)switchGender:(id)sender;
 

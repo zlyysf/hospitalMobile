@@ -399,7 +399,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <userGuides>
-                                                <userLayoutGuide location="20" affinity="minY"/>
+                                                <userLayoutGuide location="22" affinity="minY"/>
                                                 <userLayoutGuide location="60" affinity="minX"/>
                                             </userGuides>
                                             <subviews>
@@ -416,9 +416,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
-                                                        <action selector="textfieldDiseaseHistoryEditingDidBegin:" destination="7lS-4R-8vX" eventType="editingDidBegin" id="Cqv-5B-Bet"/>
-                                                        <action selector="textfieldDiseaseHistoryTouchDown:" destination="7lS-4R-8vX" eventType="touchDown" id="UXf-AZ-Byv"/>
-                                                        <action selector="textfieldDiseaseHistoryTouchDownRepeat:" destination="7lS-4R-8vX" eventType="touchDownRepeat" id="1hK-Yn-jrn"/>
                                                         <outlet property="delegate" destination="7lS-4R-8vX" id="UtH-N0-sO1"/>
                                                     </connections>
                                                 </textField>
