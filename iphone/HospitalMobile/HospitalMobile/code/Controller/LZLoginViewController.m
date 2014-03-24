@@ -10,8 +10,9 @@
 #import "LZSignUpViewController.h"
 #import "LZDemoData.h"
 #import "LZMainTabBarController.h"
+#import "LZKeyboardToolBarToHideKB.h"
 
-@interface LZLoginViewController ()
+@interface LZLoginViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -33,6 +34,9 @@
     self.navigationItem.title = @"登录";
     self.tfPassword.secureTextEntry = true;
     [self.navigationItem setHidesBackButton:YES];
+    
+    self.tfIdentityNO.delegate = self;
+    self.tfPassword.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,4 +58,26 @@
     SignUpViewController.title = @"注册";
     [self.navigationController pushViewController:SignUpViewController animated:YES];
 }
+
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (textField.inputAccessoryView == nil){
+        LZKeyboardToolBarToHideKB *keyboardToolbar = [LZKeyboardToolBarToHideKB newOne_withDoneButtonTitle:@"完成" andTextCtrl:textField];
+        textField.inputAccessoryView = keyboardToolbar;
+    }
+    return YES;
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
