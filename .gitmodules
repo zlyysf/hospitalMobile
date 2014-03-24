@@ -1,0 +1,3 @@
+[submodule "iphone/HospitalMobile/Submodules/SSCheckBoxView"]
+	path = iphone/HospitalMobile/Submodules/SSCheckBoxView
+	url = https://github.com/ardalahmet/SSCheckBoxView.git
