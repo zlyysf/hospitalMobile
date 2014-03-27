@@ -30,15 +30,9 @@
 }
 
 - (void)setup{
-    self.keyboardToolbar = [LZKeyboardToolBarToHideKB newOne_withDoneButtonTitle:@"完成" andTextCtrl:self];
+    self.keyboardToolbar = [LZKeyboardToolBarToHideKB newOne_withDoneButtonTitle:@"关闭" andTextCtrl:self];
     self.inputAccessoryView = self.keyboardToolbar;
 }
-
-
-
-
-
-
 
 
 
