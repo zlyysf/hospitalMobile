@@ -78,7 +78,7 @@
     
     UIStoryboard *sbMessage = [UIStoryboard storyboardWithName:@"Message" bundle:nil];
     UINavigationController *messageNavigationController = [sbMessage instantiateViewControllerWithIdentifier:@"LZUIMessageNavigationController"];
-    messageNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"交流" image:[UIImage imageNamed:@"message.png"] tag:1];
+    messageNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"航空总医院" image:[UIImage imageNamed:@"iconlogo_agh.png"] tag:1];//@"iconlogo_avic.png"] tag:1];
     [controllers addObject:messageNavigationController];
     
     self.viewControllers = controllers;
