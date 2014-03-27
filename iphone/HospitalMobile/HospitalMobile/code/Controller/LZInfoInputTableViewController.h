@@ -13,8 +13,9 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UITextField *textfieldDiseaseHistory;
+//@property (weak, nonatomic) IBOutlet UITextField *textfieldDiseaseHistory;
 
+@property (weak, nonatomic) IBOutlet UITextView *textviewDiseaseHistory;
 
 
 

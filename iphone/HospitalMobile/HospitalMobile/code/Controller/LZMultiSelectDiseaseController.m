@@ -33,9 +33,11 @@
 {
     [super viewDidLoad];
     
-    diseaseAry = @[@"心脏病",@"冠心病",@"糖尿病",@"高血压",@"肝炎", @"中风",@"尿毒症",@"肾炎",@"肺炎",@"支气管炎",
-                   @"气管炎",@"胃溃疡",@"十二指肠溃疡",@"胃炎",@"结膜炎", @"角膜炎",@"鼻窦炎",@"中耳炎",@"口腔溃疡",@"颈椎病",
-                   @"关节炎",@"咽炎",@"喉炎",@"骨质增生",@"直肠炎"];
+//    diseaseAry = @[@"心脏病",@"冠心病",@"糖尿病",@"高血压",@"肝炎", @"中风",@"尿毒症",@"肾炎",@"肺炎",@"支气管炎",
+//                   @"气管炎",@"胃溃疡",@"十二指肠溃疡",@"胃炎",@"结膜炎", @"角膜炎",@"鼻窦炎",@"中耳炎",@"口腔溃疡",@"颈椎病",
+//                   @"关节炎",@"咽炎",@"喉炎",@"骨质增生",@"直肠炎"];
+    diseaseAry = @[@"高血压", @"糖尿病", @"冠心病", @"肝炎",
+                   @"外伤",@"有过手术",@"有过输血"];
     checkStateAry = [LZUtility generateArrayWithFillItem:[NSNumber numberWithBool:false] andArrayLength:diseaseAry.count];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -70,10 +72,12 @@
     }//for
     NSString *strSelectedItems = [checkedItems componentsJoinedByString:@"，"];
     if (self.outerTextField != nil){
-        self.outerTextField.text = strSelectedItems;
+        NSString *str = [NSString stringWithFormat:@"%@ %@",self.outerTextField.text, strSelectedItems ];
+        self.outerTextField.text =  str;
     }
     if (self.outerTextView != nil){
-        self.outerTextView.text = strSelectedItems;
+        NSString *str = [NSString stringWithFormat:@"%@ %@",self.outerTextView.text, strSelectedItems ];
+        self.outerTextView.text = str;
     }
     
     [self.navigationController popViewControllerAnimated:YES];

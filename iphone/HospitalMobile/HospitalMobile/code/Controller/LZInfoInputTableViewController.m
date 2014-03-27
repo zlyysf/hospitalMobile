@@ -8,6 +8,7 @@
 
 #import "LZInfoInputTableViewController.h"
 #import "LZMultiSelectDiseaseController.h"
+#import "LZKeyboardToolBarToHideKB.h"
 
 @interface LZInfoInputTableViewController ()
 
@@ -72,7 +73,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     if (indexPath.section == 1 && indexPath.row == 1){
-        [self showMultiSelectDiseaseController:self.textfieldDiseaseHistory];
+//        [self showMultiSelectDiseaseController:self.textfieldDiseaseHistory];
+        [self showMultiSelectDiseaseController:self.textviewDiseaseHistory];
     }
 }
 
@@ -94,11 +96,16 @@
     return YES;
 }
 
--(void)showMultiSelectDiseaseController:(UITextField*)tf
+-(void)showMultiSelectDiseaseController:(NSObject*)textCtrl
 {
     UIStoryboard *sboard = [UIStoryboard storyboardWithName:@"InfoInput" bundle:nil];
     LZMultiSelectDiseaseController * subController = [sboard instantiateViewControllerWithIdentifier:@"LZMultiSelectDiseaseController"];
-    subController.outerTextField = tf;
+    if ([textCtrl isKindOfClass:UITextField.class]){
+        subController.outerTextField = (UITextField*)textCtrl;
+    }else if ([textCtrl isKindOfClass:UITextView.class]){
+        subController.outerTextView = (UITextView*)textCtrl;
+    }
+    
     [self.navigationController pushViewController:subController animated:YES];
 }
 
@@ -118,5 +125,19 @@
         [self.tableView reloadData];
     }
 }
+
+
+#pragma mark- UITextViewDelegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    if (textView.inputAccessoryView == nil){
+        LZKeyboardToolBarToHideKB *keyboardToolbar = [LZKeyboardToolBarToHideKB newOne_withDoneButtonTitle:@"完成" andTextCtrl:textView];
+        textView.inputAccessoryView = keyboardToolbar;
+    }
+    return YES;
+}
+
+
+
 
 @end
