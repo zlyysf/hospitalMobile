@@ -80,21 +80,21 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [textField resignFirstResponder];
+//    [textField resignFirstResponder];
     
     return YES;
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    if (range.length==0) {
-        if ([text isEqualToString:@"\n"]) {
-            [textView resignFirstResponder];
-            return NO;
-        }
-    }
-    
-    return YES;
-}
+//- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+//    if (range.length==0) {
+//        if ([text isEqualToString:@"\n"]) {
+//            [textView resignFirstResponder];
+//            return NO;
+//        }
+//    }
+//    
+//    return YES;
+//}
 
 -(void)showMultiSelectDiseaseController:(NSObject*)textCtrl
 {
@@ -127,15 +127,6 @@
 }
 
 
-#pragma mark- UITextViewDelegate
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
-{
-    if (textView.inputAccessoryView == nil){
-        LZKeyboardToolBarToHideKB *keyboardToolbar = [LZKeyboardToolBarToHideKB newOne_withDoneButtonTitle:@"完成" andTextCtrl:textView];
-        textView.inputAccessoryView = keyboardToolbar;
-    }
-    return YES;
-}
 
 
 

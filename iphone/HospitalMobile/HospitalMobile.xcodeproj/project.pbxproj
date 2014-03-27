@@ -26,6 +26,8 @@
 		081228BC18D1B88800681F85 /* LZCTCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081228BB18D1B88800681F85 /* LZCTCheckCell.m */; };
 		08355FE918D987940075BA66 /* LZAppointmentRegistrationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08355FE818D987940075BA66 /* LZAppointmentRegistrationCell.m */; };
 		08355FEF18D99A970075BA66 /* LZPayRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08355FEE18D99A970075BA66 /* LZPayRegistrationViewController.m */; };
+		0866F42718E42C5900C3A12C /* LZTextViewCanHideKb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866F42618E42C5900C3A12C /* LZTextViewCanHideKb.m */; };
+		08B0B9FE18E43757009D5D45 /* LZTextFieldCanHideKb.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B0B9FD18E43757009D5D45 /* LZTextFieldCanHideKb.m */; };
 		08C7EFD418CF26BB00159471 /* LZZhenHaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */; };
 		08C7EFD718CF28AE00159471 /* LZCheckResultTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD618CF28AE00159471 /* LZCheckResultTextViewController.m */; };
 		08C7EFDA18CF28E600159471 /* LZCheckResultImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7EFD918CF28E600159471 /* LZCheckResultImageViewController.m */; };
@@ -147,6 +149,10 @@
 		08355FE818D987940075BA66 /* LZAppointmentRegistrationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAppointmentRegistrationCell.m; sourceTree = "<group>"; };
 		08355FED18D99A970075BA66 /* LZPayRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPayRegistrationViewController.h; sourceTree = "<group>"; };
 		08355FEE18D99A970075BA66 /* LZPayRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPayRegistrationViewController.m; sourceTree = "<group>"; };
+		0866F42518E42C5900C3A12C /* LZTextViewCanHideKb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTextViewCanHideKb.h; sourceTree = "<group>"; };
+		0866F42618E42C5900C3A12C /* LZTextViewCanHideKb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTextViewCanHideKb.m; sourceTree = "<group>"; };
+		08B0B9FC18E43757009D5D45 /* LZTextFieldCanHideKb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTextFieldCanHideKb.h; sourceTree = "<group>"; };
+		08B0B9FD18E43757009D5D45 /* LZTextFieldCanHideKb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTextFieldCanHideKb.m; sourceTree = "<group>"; };
 		08C7EFD218CF26BB00159471 /* LZZhenHaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZhenHaoViewController.h; sourceTree = "<group>"; };
 		08C7EFD318CF26BB00159471 /* LZZhenHaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZhenHaoViewController.m; sourceTree = "<group>"; };
 		08C7EFD518CF28AE00159471 /* LZCheckResultTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCheckResultTextViewController.h; sourceTree = "<group>"; };
@@ -310,6 +316,10 @@
 				FC8A9EFF18DADFF4009D5FA6 /* UIScrollView+Zoom.m */,
 				08C7EFEE18D064EA00159471 /* LZKeyboardToolBarToHideKB.h */,
 				08C7EFEF18D064EA00159471 /* LZKeyboardToolBarToHideKB.m */,
+				0866F42518E42C5900C3A12C /* LZTextViewCanHideKb.h */,
+				0866F42618E42C5900C3A12C /* LZTextViewCanHideKb.m */,
+				08B0B9FC18E43757009D5D45 /* LZTextFieldCanHideKb.h */,
+				08B0B9FD18E43757009D5D45 /* LZTextFieldCanHideKb.m */,
 			);
 			path = libUI;
 			sourceTree = "<group>";
@@ -739,12 +749,14 @@
 				FC8A9F0018DADFF4009D5FA6 /* PhotoShowView.m in Sources */,
 				08D97ECD18CDB46F006D5F0C /* LZUtility.m in Sources */,
 				08D97E8718CDA1EE006D5F0C /* LZAppDelegate.m in Sources */,
+				0866F42718E42C5900C3A12C /* LZTextViewCanHideKb.m in Sources */,
 				08D97E8318CDA1EE006D5F0C /* main.m in Sources */,
 				B9A2F71018D1127E0019277B /* LZInfoInputTableViewController.m in Sources */,
 				FC9F002D18D1CCE2002B675E /* LZRegisterHospitalCell.m in Sources */,
 				08C7EFF018D064EA00159471 /* LZKeyboardToolBarToHideKB.m in Sources */,
 				08D97ED318CDBF07006D5F0C /* LZSeeDoctorViewController.m in Sources */,
 				FC8A9F0118DADFF4009D5FA6 /* UIScrollView+Zoom.m in Sources */,
+				08B0B9FE18E43757009D5D45 /* LZTextFieldCanHideKb.m in Sources */,
 				08055DFD18D2D55E001C02C0 /* LZFeeCell.m in Sources */,
 				08D97EDD18CDDAA8006D5F0C /* LZZhenHaoCell.m in Sources */,
 				08D97ED918CDD2DB006D5F0C /* LZDemoData.m in Sources */,

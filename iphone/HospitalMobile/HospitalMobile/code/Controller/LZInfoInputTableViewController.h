@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZInfoInputTableViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface LZInfoInputTableViewController : UITableViewController <UITextFieldDelegate>
 
 
 
